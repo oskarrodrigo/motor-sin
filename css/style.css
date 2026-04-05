@@ -1326,22 +1326,22 @@ section {
    ========================================= */
 .scroll-top {
   position: fixed;
-  bottom: 2rem;
-  left: 2rem;
+  bottom: 3rem;
+  left: 3rem;
   z-index: 200;
-  width: 44px;
-  height: 44px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
-  background: var(--color-white);
-  border: 1.5px solid var(--color-grey-200);
+  background: var(--color-blue);
+  border: 3px solid var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: none;
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-  box-shadow: var(--shadow-card);
+  transition: opacity var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast), bottom 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 
 .scroll-top.visible {
@@ -1349,13 +1349,17 @@ section {
   transform: translateY(0);
 }
 
+.scroll-top.lifted-by-footer {
+  bottom: 12rem;
+}
+
 .scroll-top:hover {
   box-shadow: var(--shadow-hover);
 }
 
 .scroll-top svg {
-  width: 18px; height: 18px;
-  color: var(--color-anthracite);
+  width: 28px; height: 28px;
+  color: var(--color-white);
   transition: transform var(--transition-fast);
 }
 

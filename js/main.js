@@ -454,6 +454,19 @@ function initScrollTop() {
     btn.classList.toggle('visible', window.scrollY > 400);
   }, { passive: true });
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // Prevent ScrollTop button from covering the footer
+  const footer = document.querySelector('.footer');
+  if (footer) {
+      const footerObs = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+              btn.classList.add('lifted-by-footer');
+          } else {
+              btn.classList.remove('lifted-by-footer');
+          }
+      }, { rootMargin: '0px', threshold: 0.05 });
+      footerObs.observe(footer);
+  }
 }
 
 /* ==========================================
