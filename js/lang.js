@@ -84,10 +84,17 @@ const dictionary = {
     es: "TAMBIÉN PUEDES CONTACTAR MEDIANTE ESTE FORMULARIO:", 
     ca: "TAMBÉ POTS CONTACTAR MITJANÇANT AQUEST FORMULARI:" 
   },
+  "form-lbl-name": { es: "Nombre *", ca: "Nom *" },
+  "form-lbl-mat": { es: "Matrícula (opcional)", ca: "Matrícula (opcional)" },
+  "form-lbl-tel": { es: "Teléfono *", ca: "Telèfon *" },
+  "form-lbl-email": { es: "Correo electrónico *", ca: "Correu electrònic *" },
   "form-ph-name": { es: "Tu nombre", ca: "El teu nom" },
   "form-ph-tel": { es: "Tu teléfono / Matrícula opcional", ca: "El teu telèfon / Matrícula opcional" },
+  "form-ph-email": { es: "Tu correo electrónico", ca: "El teu correu electrònic" },
+  "form-lbl-msg": { es: "¿Qué le pasa a tu coche *", ca: "Què li passa al teu cotxe *" },
   "form-ph-msg": { es: "Cuéntanos qué le pasa al coche...", ca: "Explica'ns què li passa al cotxe..." },
   "form-submit-btn": { es: 'Enviar mensaje <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>', ca: 'Enviar missatge <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>' },
+  "form-privacy": { es: "Tus datos se tratarán de acuerdo con nuestra política de privacidad.", ca: "Les teves dades es tractaran d'acord amb la nostra política de privacitat." },
 
   // Footer
   "footer-legal": { es: "Aviso Legal", ca: "Avís Legal" },
