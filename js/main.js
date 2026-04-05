@@ -577,6 +577,20 @@ function initWhatsAppAnimation() {
           if (phase === 'entering' || phase === 'entered') runLeaveAnimation();
       });
 
+      // Loop al mòbil cada 10 segons (sense haver de fer hover)
+      if (window.matchMedia('(hover: none)').matches) {
+          setInterval(() => {
+              if (phase === 'idle') {
+                  runEnterAnimation();
+                  setTimeout(() => {
+                      if (phase === 'entered') {
+                          runLeaveAnimation();
+                      }
+                  }, 4000); // Mantenir obert durant 4 segons
+              }
+          }, 10000); // S'activa automàticament cada 10 segons
+      }
+
       // Prevent WhatsApp button from covering the footer logo
       const footer = document.querySelector('.footer');
       if (footer) {
@@ -771,9 +785,24 @@ document.addEventListener('DOMContentLoaded', () => {
 function init3DCards() {
   const wrappers = document.querySelectorAll('.service-card-wrapper');
   
+  // Mobile IntersectionObserver per poder ensenyar efectes d'entrada sense hover
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      } else {
+        entry.target.classList.remove('in-view');
+      }
+    });
+  }, { threshold: 0.35 });
+
   wrappers.forEach(wrapper => {
     const card = wrapper.querySelector('.service-card');
     
+    if (window.matchMedia('(hover: none)').matches) {
+      obs.observe(card);
+    }
+
     wrapper.addEventListener('mousemove', (e) => {
       if (window.matchMedia('(hover: none)').matches) return;
       
