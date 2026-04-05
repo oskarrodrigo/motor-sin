@@ -363,11 +363,15 @@ class TextScramble {
         complete++;
         output += to;
       } else if (this.frame >= start) {
-        if (!char || Math.random() < 0.28) {
-          char = this.randomChar();
-          this.queue[i].char = char;
+        if (to === ' ' || to === '\n') {
+          output += to;
+        } else {
+          if (!char || Math.random() < 0.28) {
+            char = this.randomChar();
+            this.queue[i].char = char;
+          }
+          output += '<span style="opacity:0.5; font-family: monospace;">' + char + '</span>';
         }
-        output += '<span style="opacity:0.5; font-family: monospace;">' + char + '</span>';
       } else {
         output += from;
       }
@@ -391,7 +395,7 @@ function initHeroScramble() {
 
   const phrases = {
     es: ['LÍMITES', 'PROBLEMAS', 'PREOCUPACIONES', 'SORPRESAS', 'ESPERAS'],
-    ca: ['EL TEU COTXE A PUNT', 'CADA PEÇA COMPTA', 'MÀXIMA PRECISIÓ', 'CONTROL ABSOLUT']
+    ca: ['SENSE LÍMITS', 'SENSE PROBLEMES', 'SENSE\nPREOCUPACIONS', 'SENSE SORPRESES', 'SENSE ESPERES']
   };
 
   const fx = new TextScramble(el);
@@ -604,69 +608,119 @@ function openLegalModal(type) {
       es: {
         title: "Política de Privacidad",
         content: `
-          <p>Esta Política de Privacidad describe cómo MOTOR SIN ("nosotros", "nuestro") recopila, utiliza y protege la información personal que nos proporcionas al utilizar nuestro sitio web.</p>
-          
-          <h3>1. Recopilación de datos</h3>
-          <p>Recopilamos información personal (como nombre, teléfono, correo electrónico y matrícula del vehículo) exclusivamente cuando nos la proporcionas voluntariamente mediante nuestros formularios de contacto o solicitud de cita.</p>
+          <h3>1. Responsable del Tratamiento</h3>
+          <p><strong>Identidad:</strong> MOTOR SIN – [Nombre del titular o empresa]<br>
+          <strong>NIF:</strong> [INTRODUCIR NIF]<br>
+          <strong>Dirección:</strong> Carrer del Centre, 18, 25001 Lleida.<br>
+          <strong>Email:</strong> info@motorsin.cat</p>
 
-          <h3>2. Uso de la información</h3>
-          <p>La información recopilada se utiliza únicamente para gestionar tus citas, presupuestos y responder a tus consultas sobre nuestros servicios de taller electromecánico.</p>
+          <h3>2. Finalidad del Tratamiento</h3>
+          <p>Los datos personales facilitados (nombre, teléfono, email, matrícula) serán tratados para:</p>
+          <ul>
+            <li>Gestionar la solicitud de cita previa en el taller.</li>
+            <li>Enviar presupuestos e información sobre el estado de la reparación del vehículo.</li>
+            <li>Responder a consultas realizadas a través del formulario de contacto o WhatsApp.</li>
+          </ul>
 
-          <h3>3. Protección de datos</h3>
-          <p>Adoptamos las medidas técnicas y organizativas necesarias para garantizar la seguridad de tus datos personales y evitar su alteración, pérdida o acceso no autorizado, de acuerdo con el Reglamento General de Protección de Datos (RGPD) aplicable en Cataluña y la UE.</p>
+          <h3>3. Legitimación</h3>
+          <p>El tratamiento de sus datos se basa en el consentimiento explícito del interesado al marcar la casilla de aceptación del formulario y, posteriormente, en la ejecución de una relación precontractual o contractual de servicios mecánicos.</p>
 
-          <h3>4. Resolución de dudas y derechos</h3>
-          <p>Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición contactando con nosotros a través del correo electrónico oficial: <strong>info@motorsin.cat</strong>.</p>
+          <h3>4. Conservación de los datos</h3>
+          <p>Los datos se conservarán durante el tiempo necesario para la prestación del servicio solicitado y, en todo caso, durante los plazos legales exigidos por la normativa fiscal y mercantil.</p>
+
+          <h3>5. Destinatarios</h3>
+          <p>No se cederán datos a terceros, salvo obligación legal o que sea estrictamente necesario para la prestación del servicio (ej. proveedores de software de gestión de taller).</p>
+
+          <h3>6. Derechos</h3>
+          <p>El usuario tiene derecho a acceder, rectificar y suprimir los datos, así como otros derechos (limitación y oposición), enviando un correo a info@motorsin.cat, adjuntando copia del DNI para su identificación. También tiene derecho a presentar una reclamación ante la Autoridad de Control competente (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tratamiento no se ajusta a la normativa.</p>
         `
       },
       ca: {
         title: "Política de Privacitat",
         content: `
-          <p>Aquesta Política de Privacitat descriu com MOTOR SIN ("nosaltres", "nostre") recopila, utilitza i protegeix la informació personal que ens proporciones en utilitzar el nostre lloc web.</p>
-          
-          <h3>1. Recopilació de dades</h3>
-          <p>Recopilem informació personal (com nom, telèfon, correu electrònic i matrícula del vehicle) exclusivament quan ens la proporciones voluntàriament mitjançant els nostres formularis de contacte o sol·licitud de cita.</p>
+          <h3>1. Responsable del Tractament</h3>
+          <p><strong>Identitat:</strong> MOTOR SIN – [Nom del titular o empresa]<br>
+          <strong>NIF:</strong> [INTRODUIR NIF]<br>
+          <strong>Adreça:</strong> Carrer del Centre, 18, 25001 Lleida.<br>
+          <strong>Email:</strong> info@motorsin.cat</p>
 
-          <h3>2. Ús de la informació</h3>
-          <p>La informació recopilada s'utilitza únicament per gestionar les teves cites, pressupostos i respondre les teves consultes sobre els nostres serveis de taller electromecànic.</p>
+          <h3>2. Finalitat del Tractament</h3>
+          <p>Les dades personals facilitades (nom, telèfon, email, matrícula) seran tractades per a:</p>
+          <ul>
+            <li>Gestionar la sol·licitud de cita prèvia al taller.</li>
+            <li>Enviar pressupostos i informació sobre l'estat de la reparació del vehicle.</li>
+            <li>Respondre a consultes realitzades a través del formulari de contacte o WhatsApp.</li>
+          </ul>
 
-          <h3>3. Protecció de dades</h3>
-          <p>Adoptem les mesures tècniques i organitzatives necessàries per garantir la seguretat de les teves dades personals i evitar la seva alteració, pèrdua o accés no autoritzat, d'acord amb el Reglament General de Protecció de Dades (RGPD) aplicable a Catalunya i la UE.</p>
+          <h3>3. Legitimació</h3>
+          <p>El tractament de les seves dades es basa en el consentiment explícit de l'interessat en marcar la casella d'acceptació del formulari i, posteriorment, en l'execució d'una relació precontractual o contractual de serveis mecànics.</p>
 
-          <h3>4. Resolució de dubtes i drets</h3>
-          <p>Pots exercir els teus drets d'accés, rectificació, cancel·lació i oposició contactant amb nosaltres a través del correu electrònic oficial: <strong>info@motorsin.cat</strong>.</p>
+          <h3>4. Conservació de les dades</h3>
+          <p>Les dades es conservaran durant el temps necessari per a la prestació del servei sol·licitat i, en tot cas, durant els terminis legals exigits per la normativa fiscal i mercantil.</p>
+
+          <h3>5. Destinataris</h3>
+          <p>No se cediran dades a tercers, excepte obligació legal o que sigui estrictament necessari per a la prestació del servei (ex: proveïdors de programari de gestió de taller).</p>
+
+          <h3>6. Drets</h3>
+          <p>L'usuari té dret a accedir, rectificar i suprimir les dades, així com altres drets (limitació i oposició), enviant un correu a info@motorsin.cat, adjuntant còpia del DNI per a la seva identificació. També té dret a presentar una reclamació davant l'Autoritat de Control competent (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tractament no s'ajusta a la normativa.</p>
         `
       }
     },
     avis: {
       es: {
-        title: "Aviso Legal y Cookies",
+        title: "Aviso Legal",
         content: `
-          <p><strong>Datos de identificación:</strong> Según la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico, se informa que el titular de este sitio web es MOTOR SIN, con domicilio social en la Calle del Centro 18, 25001 Lleida.</p>
+          <h3>1. Datos Identificativos</h3>
+          <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE), se exponen los datos identificativos del titular:</p>
+          <p><strong>Titular:</strong> [Nombre Completo del Autónomo o Razón Social de la Empresa] (MOTOR SIN)<br>
+          <strong>NIF/CIF:</strong> [INTRODUCIR NIF AQUÍ - Obligatorio]<br>
+          <strong>Domicilio:</strong> Carrer del Centre, 18, 25001 Lleida.<br>
+          <strong>Correo electrónico:</strong> info@motorsin.cat<br>
+          <strong>Teléfono:</strong> 973 21 11 89<br>
+          <strong>Datos de registro:</strong> [Si es una SL, se deben indicar los datos del Registro Mercantil de Lleida: Tomo, Folio, Hoja].</p>
 
-          <h3>Propiedad intelectual</h3>
-          <p>Todos los contenidos de esta web, incluyendo textos, diseño corporativo, logotipos y vídeos, son propiedad exclusiva de MOTOR SIN o de terceros con los que se ha autorizado su uso. Queda prohibida su reproducción, distribución o modificación sin consentimiento previo.</p>
+          <h3>2. Propiedad Intelectual</h3>
+          <p>El código fuente, los diseños gráficos, las imágenes, las fotografías, los sonidos, las animaciones, el software, los textos, así como la información y los contenidos que se recogen en este sitio web están protegidos por la legislación española sobre los derechos de propiedad intelectual e industrial a favor de MOTOR SIN. No se permite la reproducción y/o publicación, total o parcial, del sitio web, ni su tratamiento informático, su distribución, difusión, ni modificación o transformación sin el permiso previo y por escrito de MOTOR SIN.</p>
 
-          <h3>¿Qué son las cookies?</h3>
-          <p>Este sitio web utiliza <em>cookies</em> técnicas exclusivamente necesarias para el funcionamiento básico de la navegación. No utilizamos <em>cookies</em> de publicidad de terceros ni vendemos datos de navegación.</p>
-
-          <h3>Contacto legal</h3>
-          <p>Para consultas sobre incidencias legales relacionadas con la web, puedes ponerte en contacto vía electrónica enviando un email a: <strong>info@motorsin.cat</strong></p>
+          <h3>3. Exclusión de Responsabilidad</h3>
+          <p>MOTOR SIN no se hace responsable de los daños y perjuicios de cualquier naturaleza que pudieran derivarse de la falta de disponibilidad, mantenimiento y efectivo funcionamiento de la web o de sus servicios y contenidos.</p>
         `
       },
       ca: {
-        title: "Avís Legal i Cookies",
+        title: "Avís Legal",
         content: `
-          <p><strong>Dades d'identificació:</strong> Segons la Llei 34/2002 de Serveis de la Societat de la Informació i de Comerç Electrònic, s'informa que el titular d'aquest lloc web és MOTOR SIN, amb domicili social al Carrer del Centre 18, 25001 Lleida.</p>
+          <h3>1. Dades Identificatives</h3>
+          <p>En compliment de l'article 10 de la Llei 34/2002, d'11 de juliol, de Serveis de la Societat de la Informació i Comerç Electrònic (LSSI-CE), s'exposen les dades identificatives del titular:</p>
+          <p><strong>Titular:</strong> [Nom Complet de l'Autònom o Raó Social de l'Empresa] (MOTOR SIN)<br>
+          <strong>NIF/CIF:</strong> [INTRODUIR NIF AQUÍ - Obligatori]<br>
+          <strong>Domicili:</strong> Carrer del Centre, 18, 25001 Lleida.<br>
+          <strong>Correu electrònic:</strong> info@motorsin.cat<br>
+          <strong>Telèfon:</strong> 973 21 11 89<br>
+          <strong>Dades de registre:</strong> [Si és una SL, cal posar les dades del Registre Mercantil de Lleida: Tom, Foli, Full].</p>
 
-          <h3>Propietat intel·lectual</h3>
-          <p>Tots els continguts d'aquesta web, incloent textos, disseny corporatiu, logotips i vídeos, són propietat exclusiva de MOTOR SIN o de tercers amb els quals s'ha autoritzat el seu ús. Queda prohibida la seva reproducció, distribució o modificació sense consentiment previ.</p>
+          <h3>2. Propietat Intel·lectual</h3>
+          <p>El codi font, els dissenys gràfics, les imatges, les fotografies, els sons, les animacions, el programari, els textos, així com la informació i els continguts que es recullen en aquest lloc web estan protegits per la legislació espanyola sobre els drets de propietat intel·lectual i industrial a favor de MOTOR SIN. No es permet la reproducció i/o publicació, total o parcial, del lloc web, ni el seu tractament informàtic, la seva distribució, difusió, ni modificació o transformació sense el permís previ i per escrit de MOTOR SIN.</p>
 
-          <h3>Què són les cookies?</h3>
-          <p>Aquest lloc web utilitza <em>cookies</em> tècniques exclusivament necessàries per al funcionament bàsic de la navegació. No fem servir <em>cookies</em> de publicitat de tercers ni venem dades de navegació.</p>
-
-          <h3>Contacte legal</h3>
-          <p>Per a consultes sobre incidències legals relacionades amb la web, pots posar-te en contacte via electrònica enviant un email a: <strong>info@motorsin.cat</strong></p>
+          <h3>3. Exclusió de Responsabilitat</h3>
+          <p>MOTOR SIN no es fa responsable dels danys i perjudicis de qualsevol naturalesa que poguessin derivar-se de la manca de disponibilitat, manteniment i efectiu funcionament del web o dels seus serveis i continguts.</p>
+        `
+      }
+    },
+    cookies: {
+      es: {
+        title: "Política de Cookies",
+        content: `
+          <p>Este sitio web utiliza únicamente cookies técnicas y de personalización propias, que son aquellas que permiten al usuario la navegación a través de la página web y la utilización de las diferentes opciones o servicios que en ella existen (como controlar el tráfico y la comunicación de datos).</p>
+          <p>Al no utilizar cookies de terceros ni cookies con fines publicitarios o de seguimiento (tracking), según el artículo 22.2 de la LSSI, no es necesario obtener el consentimiento ni mostrar un banner de advertencia complejo, aunque se informa de su existencia para la transparencia del usuario.</p>
+          <p>El usuario puede configurar su navegador para bloquear estas cookies, pero es posible que algunas funcionalidades de la web dejen de funcionar correctamente.</p>
+        `
+      },
+      ca: {
+        title: "Política de Cookies",
+        content: `
+          <p>Aquest lloc web utilitza només cookies tècniques i de personalització pròpies, que són aquelles que permeten a l'usuari la navegació a través de la pàgina web i la utilització de les diferents opcions o serveis que en ella existeixen (com controlar el trànsit i la comunicació de dades).</p>
+          <p>En no utilitzar cookies de tercers ni cookies amb finalitats publicitàries o de seguiment (tracking), segons l'article 22.2 de la LSSI, no és necessari obtenir el consentiment ni mostrar un bàner d'advertència complex, tot i que s'informa de la seva existència per a la transparència de l'usuari.</p>
+          <p>L'usuari pot configurar el seu navegador per bloquejar aquestes cookies, però és possible que algunes funcionalitats de la web deixin de funcionar correctament.</p>
         `
       }
     }

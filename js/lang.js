@@ -30,8 +30,8 @@ const dictionary = {
   "services-label": { es: "Nuestros servicios", ca: "Els nostres serveis" },
   "services-title": { es: "Soluciones para tu vehículo,<br>no simples reparaciones.", ca: "Solucions per al teu vehicle,<br>no simples reparacions." },
   "services-subtitle": { 
-    es: "Cada vehículo es único. Combinamos la experiencia de 3 generaciones con la tecnología más avanzada para garantizar que tu coche funcione como el primer día.", 
-    ca: "Cada vehicle és únic. Combinem l'experiència de 3 generacions amb la tecnologia més avançada per garantir que el teu cotxe funcioni com el primer dia." 
+    es: "Cada vehículo es único. Combinamos la experiencia de 3 generaciones con la tecnología más avanzada para garantizar que tu coche funcione como el primer&nbsp;día.", 
+    ca: "Cada vehicle és únic. Combinem l'experiència de 3 generacions amb la tecnologia més avançada per garantir que el teu cotxe funcioni com el primer&nbsp;dia." 
   },
 
   "card-diag-title": { es: "El cerebro de tu coche, al descubierto.", ca: "El cervell del teu cotxe, al descobert." },
@@ -71,7 +71,10 @@ const dictionary = {
   // Contact
   "contact-label": { es: "Habla con nosotros", ca: "Parla amb nosaltres" },
   "contact-title": { es: "Conecta tu<br>coche con nosotros.", ca: "Connecta el teu<br>cotxe amb nosaltres." },
-  "contact-desc": { es: "Estamos en el centro neurálgico de la ciudad automotriz. Ven a visitarnos o saca tu cita por WhatsApp para que la espera sea de cero minutos.", ca: "Estem al centre neuràlgic de la ciutat automotriu. Vine a visitar-nos o treu la teva cita per WhatsApp perquè l'espera sigui de zero minuts." },
+  "contact-desc": { 
+    es: "Estamos en el barrio de la Bordeta, listos para cuidar de tu vehículo. Pásate a vernos o escríbenos por WhatsApp y reserva tu cita al instante, asegurándote una atención al momento, sin esperas innecesarias.", 
+    ca: "Som al barri de la Bordeta, a punt per cuidar del teu vehicle. Passa'ns a veure o escriu-nos per WhatsApp i reserva la teva cita a l'instant, assegurant-te una atenció al moment, sense esperes innecessàries." 
+  },
   
   "contact-loc-title": { es: "Lleida — Centro", ca: "Lleida — Centre" },
   "contact-tel-label": { es: "Teléfono", ca: "Telèfon" },
@@ -96,40 +99,62 @@ const dictionary = {
   "form-ph-msg": { es: "Cuéntanos qué le pasa al coche...", ca: "Explica'ns què li passa al cotxe..." },
   "form-submit-btn": { es: 'Enviar mensaje <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>', ca: 'Enviar missatge <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>' },
   "form-privacy": { es: "Tus datos se tratarán de acuerdo con nuestra política de privacidad.", ca: "Les teves dades es tractaran d'acord amb la nostra política de privacitat." },
+  "form-check-priv": { 
+    es: 'Acepto la <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacidad</a>.', 
+    ca: 'Accepto la <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacitat</a>.' 
+  },
+  "form-legal-footer": { 
+    es: 'Información básica: Responsable: MOTOR SIN. Finalidad: Gestionar tu cita. Derechos: Acceso, rectificación y supresión en info@motorsin.cat. Más info en nuestra <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacidad</a>.', 
+    ca: 'Informació bàsica: Responsable: MOTOR SIN. Finalitat: Gestionar la teva cita. Drets: Accés, rectificació i supressió a info@motorsin.cat. Més info a la nostra <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacitat</a>.' 
+  },
 
   // Footer
   "footer-legal": { es: "Aviso Legal", ca: "Avís Legal" },
   "footer-priv": { es: "Privacidad", ca: "Privacitat" },
+  "footer-cookies": { es: "Política de Cookies", ca: "Política de Cookies" },
   "footer-copy": { es: "© 2026 MOTOR SIN. Todos los derechos reservados.", ca: "© 2026 MOTOR SIN. Tots els drets reservats." },
   "footer-creator": { es: "Hecho con el", ca: "Fet amb el" },
   "footer-creator-by": { es: "por", ca: "per" },
   
   // WhatsApp Float
   "whatsapp-float-txt": { es: "PEDIR CITA", ca: "DEMANAR CITA" },
+  
+  // Misc
+  "scroll-top": { es: "Volver arriba", ca: "Tornar a dalt" },
 };
 
 function initLanguage() {
   const currentLang = localStorage.getItem('lang') || 'es'; // default Spanish
   
-  const els = document.querySelectorAll('[data-i18n]');
+  const els = document.querySelectorAll('[data-i18n], [data-i18n-title]');
   
   function applyLang(lang) {
     els.forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (dictionary[key] && dictionary[key][lang]) {
-        if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
-          el.setAttribute('placeholder', dictionary[key][lang]);
-        } else if (key === 'whatsapp-float-txt') {
-          // Rebuild letter spans for CSS animation
-          const text = dictionary[key][lang];
-          let html = '';
-          for (let i = 0; i < text.length; i++) {
-            const char = text[i] === ' ' ? '&nbsp;' : text[i];
-            html += `<span class="cita-letter">${char}</span>`;
+      if (el.hasAttribute('data-i18n')) {
+        const key = el.getAttribute('data-i18n');
+        if (dictionary[key] && dictionary[key][lang]) {
+          if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
+            el.setAttribute('placeholder', dictionary[key][lang]);
+          } else if (key === 'whatsapp-float-txt') {
+            // Rebuild letter spans for CSS animation
+            const text = dictionary[key][lang];
+            let html = '';
+            for (let i = 0; i < text.length; i++) {
+              const char = text[i] === ' ' ? '&nbsp;' : text[i];
+              html += `<span class="cita-letter">${char}</span>`;
+            }
+            el.innerHTML = html;
+          } else {
+            el.innerHTML = dictionary[key][lang];
           }
-          el.innerHTML = html;
-        } else {
-          el.innerHTML = dictionary[key][lang];
+        }
+      }
+      
+      if (el.hasAttribute('data-i18n-title')) {
+        const key = el.getAttribute('data-i18n-title');
+        if (dictionary[key] && dictionary[key][lang]) {
+          el.setAttribute('title', dictionary[key][lang]);
+          el.setAttribute('aria-label', dictionary[key][lang]);
         }
       }
     });

@@ -111,7 +111,7 @@
       <p class="hero__antetitle" data-i18n="hero-antetitle">TRADICIÓN Y TECNOLOGÍA · LLEIDA</p>
       <h1 class="hero__title" style="min-height: 3.3em; display: flex; flex-direction: column; justify-content: flex-start;">
         <span style="font-weight: 900; color: inherit;">MOTOR SIN </span>
-        <span class="highlight scramble-target" data-scramble="LÍMITES" style="display:block;">LÍMITES</span>
+        <span class="highlight scramble-target" data-scramble="LÍMITES" style="display:block; white-space: pre-line;">LÍMITES</span>
       </h1>
       <p class="hero__subtitle" data-i18n="hero-subtitle">
         Conocemos tu vehículo desde el último tornillo hasta el sistema electrónico más complejo. No nos limitamos a cambiar piezas; entendemos cómo encajan para reconstruir el rendimiento original de tu coche. La mecánica de precisión que tu motor exige.
@@ -508,6 +508,13 @@
 
           </div>
 
+          <div class="form-checkbox" style="margin-bottom: 2rem; display: flex; align-items: start; gap: 0.5rem;">
+            <input type="checkbox" id="form-privacitat-check" name="privacitat_acceptada" required style="margin-top: 5px;">
+            <label for="form-privacitat-check" data-i18n="form-check-priv" style="font-size: 0.9rem; color: rgba(255,255,255,0.8);">
+              Acepto la <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal('privacitat');">Política de Privacidad</a>.
+            </label>
+          </div>
+
           <div class="form-success" role="alert" aria-live="polite">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#25D366" stroke-width="2"
                  style="width:48px;height:48px;margin:0 auto 1rem;">
@@ -524,8 +531,8 @@
             </svg>
           </button>
 
-          <p style="font-size:.75rem;color:rgba(255,255,255,.3);text-align:center;margin-top:1rem;" data-i18n="form-privacy">
-            Tus datos se tratarán de acuerdo con nuestra política de privacidad.
+          <p class="form-legal-footer" style="font-size:.7rem;color:rgba(255,255,255,.5);line-height:1.4;margin-top:1.5rem;" data-i18n="form-legal-footer">
+            Información básica: Responsable: MOTOR SIN. Finalidad: Gestionar tu cita. Derechos: Acceso, rectificación y supresión en info@motorsin.cat. Más info en nuestra <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal('privacitat');">Política de Privacidad</a>.
           </p>
         </form>
       </div>
@@ -555,6 +562,7 @@
     <!-- Esquerra: Legal -->
     <div class="footer__left">
       <a href="#" class="footer__link" id="footer-privacitat" onclick="event.preventDefault(); openLegalModal('privacitat');" data-i18n="footer-priv">Privacidad</a>
+      <a href="#" class="footer__link" id="footer-cookies" onclick="event.preventDefault(); openLegalModal('cookies');" data-i18n="footer-cookies">Política de Cookies</a>
       <a href="#" class="footer__link" id="footer-avis" onclick="event.preventDefault(); openLegalModal('avis');" data-i18n="footer-legal">Aviso Legal</a>
     </div>
 
@@ -633,7 +641,7 @@
 </a>
 
 <!-- SCROLL TO TOP -->
-<button id="scroll-top-btn" class="scroll-top" aria-label="Tornar a dalt" title="Tornar a dalt">
+<button id="scroll-top-btn" class="scroll-top" aria-label="Tornar a dalt" title="Tornar a dalt" data-i18n-title="scroll-top">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width: 24px; height: 24px;">
     <path d="M12 2L3 13h5v9h8v-9h5L12 2z"/>
   </svg>
