@@ -559,6 +559,19 @@ function initWhatsAppAnimation() {
           isHovered = false;
           if (phase === 'entering' || phase === 'entered') runLeaveAnimation();
       });
+
+      // Prevent WhatsApp button from covering the footer logo
+      const footer = document.querySelector('.footer');
+      if (footer) {
+          const footerObs = new IntersectionObserver((entries) => {
+              if (entries[0].isIntersecting) {
+                  citaBtn.classList.add('lifted-by-footer');
+              } else {
+                  citaBtn.classList.remove('lifted-by-footer');
+              }
+          }, { rootMargin: '0px', threshold: 0.05 });
+          footerObs.observe(footer);
+      }
   }
 }
 

@@ -1272,6 +1272,11 @@ section {
     overflow: hidden;
     cursor: none !important; /* using custom cursor */
     animation: cita-pulse 2.2s ease-in-out infinite;
+    transition: bottom 0.4s cubic-bezier(0.23, 1, 0.32, 1), background 0.3s;
+}
+
+.whatsapp-float.lifted-by-footer {
+    bottom: 12rem; /* lifts it up over the footer to sit on the map */
 }
 
 @keyframes cita-pulse {
