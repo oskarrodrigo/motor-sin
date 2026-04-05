@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="animation.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Interactive 3D Card</title>
+</head>
+<body class="animation-area">
+  <div>
+	<ul class="box-area">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	  <div class="container">
+		<div class="card">
+			<div class="goku">
+				<img src="img/goku.png" alt="image">
+			</div>
+			<div class="goku">
+				<img src="img/dragonballz.png" alt="image" style="width: 100%;" class="zoom-in-zoom-out">
+			</div>
+		</div>
+	  </div>
+	<ul class="box-area">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+<script>
+jQuery(document).ready(function ($) {
+  var $card = $(".card");
+  var $container = $(".container");
+  var $goku = $(".goku img");
+  var $purchase = $(".purchase");
+  
+  $container.on("mousemove", function (e) {
+    let xAxis = (window.innerWidth / 2 - e.clientX) / 25;
+    let yAxis = (window.innerHeight / 2 - e.clientY) / 25;
+    $card.css("transform", `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`);
+  });
+
+  $container.hover(function () {
+    $card.toggleClass("has-transform");
+    $goku.toggleClass("has-transform");
+    $purchase.toggleClass("has-transform");
+  });
+
+  $container.on("mouseleave", function () {
+    $card.css("transform", `rotateY(0deg) rotateX(0deg)`);
+  });
+});	
+</script>
+  
+</body>
+
+</html>

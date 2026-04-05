@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MOTOR SIN | Taller electromecánico en Lleida</title>
+  <meta name="description" content="Taller electromecánico de confianza en Lleida desde 1978. Diagnóstico electrónico, mantenimiento, neumáticos y mecánica de precisión. Tres generaciones de la familia Sin. Calle del Centro 18, Lleida.">
+  <meta name="keywords" content="taller mecánico, Lleida, MOTOR SIN, diagnóstico electrónico, cambio aceite, ITV, neumáticos, mecánica">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="business.business">
+  <meta property="og:title" content="MOTOR SIN — Taller Electromecánico en Lleida">
+  <meta property="og:description" content="3 generaciones de mecánicos cuidando de tu coche. Diagnóstico avanzado, ITV, neumáticos. Calle del Centro 18, Lleida.">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="icon" type="image/png" href="public/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/lang.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "MOTOR SIN",
+    "description": "Taller electromecánico de confianza en Lleida desde 1978. Tres generaciones de la familia Sin.",
+    "telephone": "+34973211189",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer del Centre, 18",
+      "addressLocality": "Lleida",
+      "postalCode": "25001",
+      "addressCountry": "ES"
+    },
+    "openingHours": "Mo-Fr 08:30-13:30, Mo-Fr 16:00-19:00",
+    "foundingDate": "1978"
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- NAV -->
+<header role="banner" style="position: sticky; top: 0; z-index: 999;">
+  <nav class="nav" aria-label="Navegación principal">
+    <a href="#inici" aria-label="MOTOR SIN — Inicio">
+      <img src="public/images/logo.png" alt="MOTOR SIN — Taller Electromecánico"
+           class="nav__logo" width="320" height="116" loading="eager" fetchpriority="high">
+    </a>
+
+    <ul class="nav__links" role="list">
+      <li><a href="#serveis"  class="nav__link" id="nav-serveis" data-i18n="nav-serveis">Servicios</a></li>
+      <li><a href="#qui-som"  class="nav__link" id="nav-qui-som" data-i18n="nav-qui-som">Quiénes Somos</a></li>
+      <li><a href="#contacte" class="nav__link" id="nav-contacte" data-i18n="nav-contacte">Contacto</a></li>
+      <li>
+        <a href="https://wa.me/34629934124?text=Hola!%20👋%20Sóc%20a%20la%20web%20de%20MOTOR%20SIN%20i%20voldria%20reservar%20una%20cita%20o%20fer%20una%20consulta.%20Em%20podeu%20ajudar%3F"
+           class="nav__cta" id="nav-cta-whatsapp" data-i18n="nav-cta-whatsapp"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Pedir cita por WhatsApp">
+          PEDIR CITA
+        </a>
+      </li>
+      <li>
+        <div class="lang-toggle-wrap">
+          <input type="checkbox" id="lang-switch-desktop" class="lang-toggle-checkbox">
+          <label for="lang-switch-desktop" class="lang-toggle-label">
+            <span class="lang-text lang-text-es">CAST</span>
+            <span class="lang-slider"></span>
+            <span class="lang-text lang-text-ca">CAT</span>
+          </label>
+        </div>
+      </li>
+    </ul>
+
+    <button class="nav__hamburger" aria-label="Abrir menú" id="hamburger-btn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<nav class="mobile-nav" aria-label="Menú mòbil" id="mobile-nav">
+  <a href="#inici"    class="mobile-nav__link" id="mob-inici" data-i18n="mob-inici">Inicio</a>
+  <a href="#serveis"  class="mobile-nav__link" id="mob-serveis" data-i18n="nav-serveis">Servicios</a>
+  <a href="#qui-som"  class="mobile-nav__link" id="mob-qui-som" data-i18n="nav-qui-som">Quiénes Somos</a>
+  <a href="#contacte" class="mobile-nav__link" id="mob-contacte" data-i18n="nav-contacte">Contacto</a>
+  <div class="mobile-lang-switch">
+    <div class="lang-toggle-wrap">
+      <input type="checkbox" id="lang-switch-mobile" class="lang-toggle-checkbox">
+      <label for="lang-switch-mobile" class="lang-toggle-label">
+        <span class="lang-text lang-text-es">CAST</span>
+        <span class="lang-slider"></span>
+        <span class="lang-text lang-text-ca">CAT</span>
+      </label>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <!-- ======================== HERO ======================== -->
+  <section id="inici" class="hero" aria-label="Presentació MOTOR SIN">
+
+    <div class="hero__left">
+      <p class="hero__antetitle" data-i18n="hero-antetitle">TRADICIÓN Y TECNOLOGÍA · LLEIDA</p>
+      <h1 class="hero__title" style="min-height: 3.3em; display: flex; flex-direction: column; justify-content: flex-start;">
+        <span style="font-weight: 900; color: inherit;">MOTOR SIN </span>
+        <span class="highlight scramble-target" data-scramble="LÍMITES" style="display:block;">LÍMITES</span>
+      </h1>
+      <p class="hero__subtitle" data-i18n="hero-subtitle">
+        Conocemos tu vehículo desde el último tornillo hasta el sistema electrónico más complejo. No nos limitamos a cambiar piezas; entendemos cómo encajan para reconstruir el rendimiento original de tu coche. La mecánica de precisión que tu motor exige.
+      </p>
+      <div class="hero__cta-group">
+        <a href="#contacte" class="btn-magnetic" id="hero-cta-btn"
+           aria-label="Posar a punt el vehicle" data-i18n="hero-cta-btn">
+          <span>👉 Pon a punto tu vehículo</span>
+        </a>
+        <p class="hero__microcopy" data-i18n="hero-microcopy">Revisión rápida. Sin sorpresas en la factura.</p>
+      </div>
+    </div>
+
+    <div class="hero__right">
+      <div class="hero__video-wrapper">
+        <div class="hero__video-skeleton" aria-hidden="true"></div>
+        <video id="hero-video" class="hero__video"
+               data-src="public/videos/hero.webm"
+               muted playsinline preload="auto"
+               style="cursor: none;"
+               aria-label="Vídeo de mecànics treballant en un motor"></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== TRUST STRIP ======================== -->
+  <section class="trust-strip" aria-label="Credenciales y garantías">
+    <div class="trust-strip__inner">
+
+      <div class="trust-badge reveal reveal-delay-1">
+        <div class="trust-badge__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <span data-i18n="trust-1">Garantía en todos los trabajos</span>
+      </div>
+
+      <div class="trust-badge reveal reveal-delay-2">
+        <div class="trust-badge__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <span data-i18n="trust-2">Presupuesto en 24h</span>
+      </div>
+
+      <div class="trust-badge reveal reveal-delay-3">
+        <div class="trust-badge__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+          </svg>
+        </div>
+        <span data-i18n="trust-3">Sin sorpresas en la factura</span>
+      </div>
+
+      <div class="trust-badge reveal reveal-delay-4">
+        <div class="trust-badge__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+        </div>
+        <span data-i18n="trust-4">3 Generaciones de familia</span>
+      </div>
+
+      <div class="trust-badge reveal reveal-delay-1">
+        <div class="trust-badge__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+          </svg>
+        </div>
+        <span data-i18n="trust-5">Diagnóstico de última generación</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== SERVICES ======================== -->
+  <section id="serveis" class="services" aria-label="Nuestros servicios">
+
+    <header class="services__header">
+      <p class="section-label reveal" data-i18n="services-label">Nuestros servicios</p>
+      <h2 class="section-title reveal" data-i18n="services-title">Soluciones para tu vehículo,<br>no simples reparaciones.</h2>
+      <p class="services__subtitle reveal" data-i18n="services-subtitle">
+        Cada vehículo es único. Combinamos la experiencia de 3 generaciones con la tecnología más avanzada para garantizar que tu coche funcione como el primer día.
+      </p>
+    </header>
+
+    <div class="services__grid" role="list">
+
+      <div class="service-card-wrapper">
+        <article class="service-card reveal reveal-delay-1" role="listitem" id="card-diagnostic">
+          <span class="service-card__number" aria-hidden="true">01</span>
+          <div class="service-card__icon-wrap" aria-hidden="true">
+            <svg class="service-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/>
+            </svg>
+          </div>
+
+          <div class="card-visual" aria-hidden="true">
+            <img src="./public/images/services/ecu.png" alt="ECU Diagnostic" class="card-img-3d" loading="eager">
+          </div>
+
+          <h3 class="service-card__title" data-i18n="card-diag-title">El cerebro de tu coche, al descubierto.</h3>
+          <p class="service-card__text" data-i18n="card-diag-text">
+            Conectamos tu vehículo a la última tecnología de diagnóstico para detectar anomalías
+            antes de que se conviertan en averías caras. Medidas precisas, informes claros.
+          </p>
+          <a href="#contacte" class="service-card__link" id="link-diagnostic" data-i18n="card-diag-link">
+            Pedir diagnóstico
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </article>
+      </div>
+      <div class="service-card-wrapper">
+        <article class="service-card reveal reveal-delay-2" role="listitem" id="card-manteniment">
+          <span class="service-card__number" aria-hidden="true">02</span>
+          <div class="service-card__icon-wrap" aria-hidden="true">
+            <svg class="service-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            </svg>
+          </div>
+
+          <div class="card-visual" aria-hidden="true">
+            <img src="./public/images/services/brake.png" alt="Brake System" class="card-img-3d" loading="eager">
+          </div>
+
+          <h3 class="service-card__title" data-i18n="card-mant-title">Pasa la ITV a la primera.</h3>
+          <p class="service-card__text" data-i18n="card-mant-text">
+            Cambios de aceite, filtros, frenos y revisión completa de los 40 puntos críticos. Alargamos
+            la vida útil de tu motor con mantenimiento preventivo experto.
+          </p>
+          <a href="#contacte" class="service-card__link" id="link-manteniment" data-i18n="card-mant-link">
+            Reservar revisión
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </article>
+      </div>
+      <div class="service-card-wrapper">
+        <article class="service-card reveal reveal-delay-3" role="listitem" id="card-pneumatics">
+          <span class="service-card__number" aria-hidden="true">03</span>
+          <div class="service-card__icon-wrap" aria-hidden="true">
+            <svg class="service-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="3"/>
+              <path stroke-linecap="round" d="M12 2v3m0 14v3M2 12h3m14 0h3"/>
+            </svg>
+          </div>
+
+          <div class="card-visual" aria-hidden="true">
+            <img src="./public/images/services/tire.png" alt="High Performance Tire" class="card-img-3d" loading="eager">
+          </div>
+
+          <h3 class="service-card__title" data-i18n="card-pneu-title">Conexión total con el asfalto.</h3>
+          <p class="service-card__text" data-i18n="card-pneu-text">
+            Trabajamos con las mejores marcas. Montaje, equilibrado y alineación 3D para que
+            conduzcas con la máxima seguridad y confort.
+          </p>
+          <a href="#contacte" class="service-card__link" id="link-pneumatics" data-i18n="card-pneu-link">
+            Solicitar presupuesto
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </article>
+      </div>
+      <div class="service-card-wrapper">
+        <article class="service-card reveal reveal-delay-4" role="listitem" id="card-mecanica">
+          <span class="service-card__number" aria-hidden="true">04</span>
+          <div class="service-card__icon-wrap" aria-hidden="true">
+            <svg class="service-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+            </svg>
+          </div>
+
+          <div class="card-visual" aria-hidden="true">
+            <img src="./public/images/services/engine.png" alt="Engine Compression" class="card-img-3d" loading="eager">
+          </div>
+
+          <h3 class="service-card__title" data-i18n="card-mec-title">Cirugía de motor.</h3>
+          <p class="service-card__text" data-i18n="card-mec-text">
+            Desde distribuciones hasta embragues. Si hace ruido o no funciona como el primer día, lo desmontamos, lo entendemos y lo solucionamos.
+          </p>
+          <a href="#contacte" class="service-card__link" id="link-mecanica" data-i18n="card-mec-link">
+            Explicar el problema
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== ABOUT ======================== -->
+  <section id="qui-som" class="about" aria-label="Quiénes somos — La historia de MOTOR SIN">
+    <div class="about__inner">
+
+      <div class="about__visual reveal" aria-hidden="true">
+        <div style="width:100%;aspect-ratio:4/5;border-radius:28px;position:relative;overflow:hidden;">
+          <img src="public/images/quisom.png" alt="La familia SIN" style="width:100%; height:100%; object-fit:cover;" loading="lazy">
+        </div>
+        <div style="position:absolute;bottom:-1.5rem;right:-1.5rem;background:white;border-radius:20px;padding:1.2rem 1.6rem;box-shadow:0 16px 60px rgba(0,0,0,0.14);border:1px solid #E2E6EC;min-width:180px;" aria-hidden="true">
+          <div style="font-family:'Outfit',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#9BA3AF;margin-bottom:.4rem;" data-i18n="about-badge">Años de tradición</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:2.8rem;font-weight:900;color:#1655C2;line-height:1;">
+            <span class="stat-item__number" data-target="47" data-suffix="+">0+</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__content">
+        <p class="section-label reveal" data-i18n="about-label">Nuestra historia</p>
+        <h2 class="section-title reveal" data-i18n="about-title">
+          3 Generaciones.<br>El mismo apellido.<br>La misma pasión.
+        </h2>
+
+        <blockquote class="about__quote reveal" data-i18n="about-quote">
+          "En el año 1978, el Abuelo Sin abrió por primera vez la persiana de este taller
+          en el corazón de Lleida. Trabajaba de oído, con las manos manchadas de grasa y una
+          llave inglesa como mejor aliada."
+        </blockquote>
+
+        <div class="about__timeline" role="list">
+
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-item__year">1978</span>
+            <div class="timeline-item__line" aria-hidden="true"></div>
+            <div class="timeline-item__content">
+              <h3 class="timeline-item__title" data-i18n="hist-y1-title">El Abuelo Sin — Los Orígenes</h3>
+              <p class="timeline-item__text" data-i18n="hist-y1-text">Una persiana, dos manos y una pasión por la mecánica. El taller abría sus puertas en la Calle del Centro de Lleida con herramientas analógicas y un compromiso absoluto con el vecindario.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-item__year">1998</span>
+            <div class="timeline-item__line" aria-hidden="true"></div>
+            <div class="timeline-item__content">
+              <h3 class="timeline-item__title" data-i18n="hist-y2-title">El Hijo — La Era Electrónica</h3>
+              <p class="timeline-item__text" data-i18n="hist-y2-text">La llegada de la inyección electrónica y los nuevos motores. El hijo tomaba el relevo adaptando el taller a las tecnologías emergentes sin perder el alma de familia.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-item__year" data-i18n="hist-y3-year">Hoy</span>
+            <div class="timeline-item__line" aria-hidden="true"></div>
+            <div class="timeline-item__content">
+              <h3 class="timeline-item__title" data-i18n="hist-y3-title">La 3ª Generación — MOTOR SIN</h3>
+              <p class="timeline-item__text" data-i18n="hist-y3-text">Seguimos en la misma calle, saludando a los mismos vecinos, pero hemos cambiado la llave inglesa por los ordenadores de diagnóstico más avanzados del mercado. La herramienta ha evolucionado; la honestidad y el orgullo por el trabajo bien hecho, no.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="about__stats reveal">
+          <div class="stat-item">
+            <div class="stat-item__number" data-target="47" data-suffix="+">0+</div>
+            <div class="stat-item__label" data-i18n="stat-1">Años de experiencia</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__number" data-target="3" data-suffix="">0</div>
+            <div class="stat-item__label" data-i18n="stat-2">Generaciones</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__number" data-target="2000" data-suffix="+">0+</div>
+            <div class="stat-item__label" data-i18n="stat-3">Vehículos revisados/año</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CONTACT ======================== -->
+  <section id="contacte" class="contact" aria-label="Formulario de contacto y localización">
+
+    <div class="contact__inner">
+
+      <div class="contact__left">
+        <p class="section-label reveal" data-i18n="contact-label">Habla con nosotros</p>
+        <h2 class="section-title reveal" data-i18n="contact-title">
+          Conecta tu<br>coche con nosotros.
+        </h2>
+        <p class="reveal" style="font-size:1rem;line-height:1.7;color:rgba(255,255,255,0.6);margin-top:1rem;" data-i18n="contact-desc">
+          Estamos en el centro neurálgico de la ciudad automotriz. Ven a visitarnos o saca tu cita por WhatsApp para que la espera sea de cero minutos.
+        </p>
+
+        <div class="contact__info" role="list">
+
+          <div class="contact-info-item reveal reveal-delay-1" role="listitem">
+            <div class="contact-info-item__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div>
+              <strong style="color:white;font-family:'Outfit',sans-serif;" data-i18n="contact-loc-title">Lleida — Centro</strong><br>
+              <span>Carrer del Centre, 18, 25001 Lleida</span>
+            </div>
+          </div>
+
+          <div class="contact-info-item reveal reveal-delay-2" role="listitem">
+            <div class="contact-info-item__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+            </div>
+            <div>
+              <strong style="color:white;font-family:'Outfit',sans-serif;" data-i18n="contact-tel-label">Teléfono</strong><br>
+              <a href="tel:+34973211189" style="color:rgba(255,255,255,0.6);">973 21 11 89</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item reveal reveal-delay-2" role="listitem" style="transition-delay: 0.25s">
+            <div class="contact-info-item__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <strong style="color:white;font-family:'Outfit',sans-serif;" data-i18n="contact-email-label">Correo electrónico</strong><br>
+              <a href="mailto:info@motorsin.cat" style="color:rgba(255,255,255,0.6);">info@motorsin.cat</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item reveal reveal-delay-3" role="listitem">
+            <div class="contact-info-item__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <strong style="color:white;font-family:'Outfit',sans-serif;" data-i18n="contact-time-label">Horario</strong><br>
+              <span data-i18n="contact-time-val">Lunes a Viernes<br>08:30 – 13:30<br>16:00 – 19:00</span><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reveal">
+        <form id="contact-form" class="contact__form" action="https://formsubmit.co/oskar.rodrigo@gmail.com" method="POST" aria-label="Formulario de cita o consulta">
+          <!-- FormSubmit Configuration -->
+          <input type="hidden" name="_subject" value="Nou missatge web MotorSin!">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_template" value="table">
+          <!-- /FormSubmit -->
+          
+          <div class="form-title-wrap" style="color: var(--color-blue); text-transform: uppercase; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; margin-bottom: 2rem; letter-spacing: 0.05em;" data-i18n="form-title">
+            TAMBIÉN PUEDES CONTACTAR MEDIANTE ESTE FORMULARIO:
+          </div>
+          
+          <div class="form-grid">
+            
+            <div class="form-group">
+              <label for="form-nom" class="form-label">Nombre *</label>
+              <input type="text" id="form-nom" name="nom" class="form-input"
+                     placeholder="Tu nombre" data-i18n="form-ph-name" required autocomplete="given-name">
+              <div class="form-input-bar" aria-hidden="true"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="form-matricula" class="form-label">Matrícula (opcional)</label>
+              <input type="text" id="form-matricula" name="matricula" class="form-input"
+                     placeholder="Ex: 1234-ABC" autocomplete="off">
+              <div class="form-input-bar" aria-hidden="true"></div>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="form-telefon" class="form-label">Teléfono *</label>
+              <input type="tel" id="form-telefon" name="telefon" class="form-input"
+                     placeholder="Tu teléfono / Matrícula opcional" data-i18n="form-ph-tel" required autocomplete="tel">
+              <div class="form-input-bar" aria-hidden="true"></div>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="form-missatge" class="form-label">¿Qué le pasa a tu coche *</label>
+              <textarea id="form-missatge" name="missatge" class="form-textarea"
+                        placeholder="Cuéntanos qué le pasa al coche..." data-i18n="form-ph-msg"
+                        required></textarea>
+              <div class="form-input-bar" aria-hidden="true"></div>
+            </div>
+
+          </div>
+
+          <div class="form-success" role="alert" aria-live="polite">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#25D366" stroke-width="2"
+                 style="width:48px;height:48px;margin:0 auto 1rem;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <h3 style="font-family:'Outfit',sans-serif;font-size:1.2rem;margin-bottom:.5rem;">¡Mensaje enviado! 🎉</h3>
+            <p style="font-size:.9rem;opacity:.7;">Te contactaremos en menos de 24 horas. Gracias por confiar en MOTOR SIN.</p>
+          </div>
+
+          <button type="submit" class="form-submit" id="form-submit-btn" aria-label="Enviar formulario de cita" data-i18n="form-submit-btn">
+            Enviar mensaje
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </button>
+
+          <p style="font-size:.75rem;color:rgba(255,255,255,.3);text-align:center;margin-top:1rem;">
+            Tus datos se tratarán de acuerdo con nuestra política de privacidad.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== GOOGLE MAPS ======================== -->
+  <div class="map-section" aria-label="Mapa de localització de MOTOR SIN">
+    <iframe
+      src="https://maps.google.com/maps?q=Carrer+del+Centre+18%2C+25001+Lleida&hl=ca&z=16&output=embed"
+      width="100%"
+      height="420"
+      style="border:0;display:block;"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Ubicació de MOTOR SIN — Carrer del Centre 18, Lleida">
+    </iframe>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <!-- Esquerra: Legal -->
+    <div class="footer__left">
+      <a href="#" class="footer__link" id="footer-privacitat" onclick="event.preventDefault(); openLegalModal('privacitat');" data-i18n="footer-priv">Privacidad</a>
+      <a href="#" class="footer__link" id="footer-avis" onclick="event.preventDefault(); openLegalModal('avis');" data-i18n="footer-legal">Aviso Legal</a>
+    </div>
+
+    <!-- Centre: Copyright -->
+    <div class="footer__center">
+      <p class="footer__copy" data-i18n="footer-copy">© 2026 MOTOR SIN. Todos los derechos reservados.</p>
+    </div>
+
+    <!-- Dreta: Credits -->
+    <div class="footer__right">
+      <a href="https://www.iamoskar.me" target="_blank" rel="noopener noreferrer" class="creator-link">
+        <span class="creator-text" data-i18n="footer-creator">Hecho con el</span>
+        <svg class="heart-pulse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"/>
+        </svg>
+        <span class="creator-text" data-i18n="footer-creator-by">por</span>
+        <img src="public/images/logo_oskar.png" alt="IAMOskar" class="creator-logo">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- LEGAL MODAL -->
+<div id="legal-modal" class="modal" aria-hidden="true">
+  <div class="modal__overlay" onclick="closeLegalModal()"></div>
+  <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal__close" onclick="closeLegalModal()" aria-label="Tancar">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="modal__content">
+      <h2 id="modal-title">Avís Legal</h2>
+      <div id="modal-body" class="modal-body-text">
+        <!-- Text es canvia via JS -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHATSAPP FLOATING -->
+<a href="https://wa.me/34629934124?text=Hola!%20👋%20Sóc%20a%20la%20web%20de%20MOTOR%20SIN%20i%20voldria%20reservar%20una%20cita%20o%20fer%20una%20consulta.%20Em%20podeu%20ajudar%3F" class="whatsapp-float" id="cita-btn" aria-label="Demanar cita per WhatsApp" target="_blank" rel="noopener noreferrer">
+    <!-- Icona del Cotxe (SVG) -->
+    <svg class="car-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 36">
+        <ellipse cx="40" cy="34" rx="34" ry="2" fill="rgba(0,0,0,0.18)"/>
+        <rect x="8" y="20" width="64" height="8" rx="3" fill="white"/>
+        <path d="M22 20 L28 10 Q30 7 34 7 L50 7 Q54 7 56 10 L60 20 Z" fill="white"/>
+        <path d="M54 20 L52 11 Q53 8.5 55 9 L60 20 Z" fill="rgba(120,220,160,0.55)"/>
+        <path d="M28 20 L30 11 Q29 8 27 9 L23 20 Z" fill="rgba(120,220,160,0.45)"/>
+        <path d="M32 20 L34 9 L50 9 L52 20 Z" fill="rgba(140,230,170,0.5)"/>
+        <line x1="42" y1="9" x2="42" y2="20" stroke="rgba(0,0,0,0.2)" stroke-width="1.5"/>
+        <rect x="68" y="21" width="5" height="4" rx="1.5" fill="#FFE566"/>
+        <rect x="70" y="22" width="3" height="2" rx="1" fill="white" opacity="0.9"/>
+        <rect x="7" y="21" width="4" height="4" rx="1.5" fill="#FF4444"/>
+        <rect x="8" y="22" width="2" height="2" rx="1" fill="#FF2222"/>
+        <ellipse cx="58" cy="28" rx="8" ry="8" fill="#1a1a1a" stroke="white" stroke-width="2"/>
+        <ellipse cx="58" cy="28" rx="4.5" ry="4.5" fill="#333"/>
+        <ellipse cx="58" cy="28" rx="2" ry="2" fill="white"/>
+        <ellipse cx="22" cy="28" rx="8" ry="8" fill="#1a1a1a" stroke="white" stroke-width="2"/>
+        <ellipse cx="22" cy="28" rx="4.5" ry="4.5" fill="#333"/>
+        <ellipse cx="22" cy="28" rx="2" ry="2" fill="white"/>
+    </svg>
+    <!-- Text que apareix en lletres individuals -->
+    <span class="cita-text" aria-hidden="true" data-i18n="whatsapp-float-txt">
+        <span class="cita-letter">P</span>
+        <span class="cita-letter">E</span>
+        <span class="cita-letter">D</span>
+        <span class="cita-letter">I</span>
+        <span class="cita-letter">R</span>
+        <span class="cita-letter">&nbsp;</span>
+        <span class="cita-letter">C</span>
+        <span class="cita-letter">I</span>
+        <span class="cita-letter">T</span>
+        <span class="cita-letter">A</span>
+    </span>
+</a>
+
+<!-- SCROLL TO TOP -->
+<button id="scroll-top-btn" class="scroll-top" aria-label="Tornar a dalt" title="Tornar a dalt">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+  </svg>
+</button>
+
+<style>
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+</style>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
