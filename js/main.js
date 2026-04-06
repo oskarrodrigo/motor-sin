@@ -487,12 +487,14 @@ function initCountingStats() {
       if (!entry.isIntersecting) return;
       const el       = entry.target;
       const target   = parseInt(el.getAttribute('data-target'));
+      const prefix   = el.getAttribute('data-prefix') || '';
       const suffix   = el.getAttribute('data-suffix') || '';
       const duration = 1500;
       const start    = performance.now();
       const update   = now => {
         const p = Math.min((now - start) / duration, 1);
-        el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target) + suffix;
+        const currentNum = Math.round((1 - Math.pow(1 - p, 3)) * target);
+        el.textContent = prefix + currentNum + suffix;
         if (p < 1) requestAnimationFrame(update);
       };
       requestAnimationFrame(update);

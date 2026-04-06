@@ -1632,9 +1632,9 @@ section {
 
   /* Animació flotant per a les imatges només a mòbil */
   @keyframes mobileFloat {
-    0% { transform: translateY(0px) translateZ(80px); }
-    50% { transform: translateY(-10px) translateZ(80px); }
-    100% { transform: translateY(0px) translateZ(80px); }
+    0% { transform: translateY(0px) translateZ(80px) scale(1); }
+    50% { transform: translateY(-12px) translateZ(100px) scale(1.12); }
+    100% { transform: translateY(0px) translateZ(80px) scale(1); }
   }
 
   .in-view .card-img-3d {
