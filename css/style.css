@@ -462,25 +462,23 @@ ul, ol { list-style: none; }
 .video-mobile-badge {
   display: none;
   position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  bottom: 0.8rem;
+  right: 0.8rem;
   z-index: 110;
-  background: rgba(30, 111, 245, 0.9);
+  width: 44px;
+  height: 44px;
+  background: rgba(30, 111, 245, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 50px;
-  font-family: var(--font-heading);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  box-shadow: 0 8px 25px rgba(30, 111, 245, 0.4);
+  border-radius: 50%;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
   pointer-events: none;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(5px);
   transition: all 0.4s var(--ease-out);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .video-mobile-badge.visible {
@@ -489,9 +487,9 @@ ul, ol { list-style: none; }
 }
 
 @keyframes pillPulse {
-  0% { transform: scale(1); box-shadow: 0 8px 25px rgba(30, 111, 245, 0.4); }
-  50% { transform: scale(1.05); box-shadow: 0 12px 35px rgba(30, 111, 245, 0.6); }
-  100% { transform: scale(1); box-shadow: 0 8px 25px rgba(30, 111, 245, 0.4); }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 .video-mobile-badge.visible {
