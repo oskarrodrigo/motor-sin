@@ -121,6 +121,7 @@ const dictionary = {
   
   // Misc
   "scroll-top": { es: "Volver arriba", ca: "Tornar a dalt" },
+  "video-mobile-badge": { es: "REPRODUCIR", ca: "REPRODUIR" },
 };
 
 function initLanguage() {

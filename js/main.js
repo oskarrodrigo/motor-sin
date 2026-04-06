@@ -240,20 +240,48 @@ function initHeroVideo() {
       badge.innerHTML = dictionary['video-hover-badge'] ? dictionary['video-hover-badge'][currentLang] : 'ARRANCA EL MOTOR';
       wrapper.appendChild(badge);
 
+      // Mobile Pill Badge
+      const mobilePill = document.createElement('div');
+      mobilePill.className = 'video-mobile-badge';
+      mobilePill.innerHTML = `
+        <svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <span data-i18n="video-mobile-badge">${dictionary['video-mobile-badge'] ? dictionary['video-mobile-badge'][currentLang] : 'REPRODUCIR'}</span>
+      `;
+      wrapper.appendChild(mobilePill);
+
       window.addEventListener('languageChanged', (e) => {
           if (dictionary['video-hover-badge']) {
               badge.textContent = dictionary['video-hover-badge'][e.detail.lang];
+          }
+          const mobilePillText = mobilePill.querySelector('span');
+          if (mobilePillText && dictionary['video-mobile-badge']) {
+              mobilePillText.textContent = dictionary['video-mobile-badge'][e.detail.lang];
           }
       });
 
       let isVideoEnded = false;
 
-      video.addEventListener('ended', () => {
-          isVideoEnded = true;
-      });
       video.addEventListener('play', () => {
           isVideoEnded = false;
           badge.classList.remove('active');
+          if (window.matchMedia('(hover: none)').matches) {
+            mobilePill.classList.remove('visible');
+          }
+      });
+
+      video.addEventListener('pause', () => {
+          if (window.matchMedia('(hover: none)').matches) {
+            mobilePill.classList.add('visible');
+          }
+      });
+
+      video.addEventListener('ended', () => {
+          isVideoEnded = true;
+          if (window.matchMedia('(hover: none)').matches) {
+            mobilePill.classList.add('visible');
+          }
       });
 
       wrapper.addEventListener('mousemove', (e) => {
