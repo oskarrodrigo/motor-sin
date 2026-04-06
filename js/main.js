@@ -176,11 +176,13 @@ function initNavigation() {
   if (hamburger && mobileNav) {
     hamburger.addEventListener('click', () => {
       const open = mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('open');
       document.body.style.overflow = open ? 'hidden' : '';
     });
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileNav.classList.remove('open');
+        hamburger.classList.remove('open');
         document.body.style.overflow = '';
       });
     });
@@ -519,7 +521,6 @@ function initWhatsAppAnimation() {
       function runEnterAnimation() {
           if (animTimeline) animTimeline.kill();
           phase = 'entering';
-          isHovered = true;
           const currentLetters = citaBtn.querySelectorAll('.cita-letter');
           
           gsap.set(currentLetters, { opacity: 0, y: 10, x: 0 });

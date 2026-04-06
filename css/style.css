@@ -1428,7 +1428,11 @@ section {
   transition: color var(--transition-fast);
 }
 
-.mobile-nav__link:active, .mobile-nav__link:visited { color: var(--color-anthracite); }
+.mobile-nav__link:visited, .mobile-nav__link:active {
+  color: var(--color-blue);
+}
+
+.mobile-nav__link:hover { color: var(--color-anthracite); }
 
 .lang-toggle-wrap {
   display: flex;
@@ -1624,6 +1628,25 @@ section {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     border-color: var(--color-blue-light);
+  }
+
+  /* Animació flotant per a les imatges només a mòbil */
+  @keyframes mobileFloat {
+    0% { transform: translateY(0px) translateZ(80px); }
+    50% { transform: translateY(-10px) translateZ(80px); }
+    100% { transform: translateY(0px) translateZ(80px); }
+  }
+
+  .in-view .card-img-3d {
+    animation: mobileFloat 3s ease-in-out infinite;
+  }
+
+  .about__stats {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .stat-item__number {
+    font-size: 2.2rem;
   }
 }
 
