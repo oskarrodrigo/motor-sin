@@ -76,7 +76,8 @@ const dictionary = {
     ca: "Som al barri de la Bordeta, a punt per cuidar del teu vehicle. Passa'ns a veure o escriu-nos per WhatsApp i reserva la teva cita a l'instant, assegurant-te una atenció al moment, sense esperes innecessàries." 
   },
   
-  "contact-loc-title": { es: "Lleida — Centro", ca: "Lleida — Centre" },
+  "contact-loc-title": { es: "Dirección", ca: "Adreça" },
+  "contact-addr-val":  { es: "C. Centro, nº 18 (25001 Lleida)", ca: "C. Centre, núm. 18 (25001 Lleida)" },
   "contact-tel-label": { es: "Teléfono", ca: "Telèfon" },
   "contact-email-label": { es: "Correo electrónico", ca: "Correu electrònic" },
   "contact-time-label": { es: "Horario", ca: "Horari" },
@@ -104,11 +105,18 @@ const dictionary = {
     ca: 'Accepto la <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacitat</a>.' 
   },
   "form-legal-footer": { 
-    es: 'Información básica: Responsable: MOTOR SIN. Finalidad: Gestionar tu cita. Derechos: Acceso, rectificación y supresión en info@motorsin.cat. Más info en nuestra <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacidad</a>.', 
-    ca: 'Informació bàsica: Responsable: MOTOR SIN. Finalitat: Gestionar la teva cita. Drets: Accés, rectificació i supressió a info@motorsin.cat. Més info a la nostra <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacitat</a>.' 
+    es: 'Información básica: Responsable: MOTOR SIN. Finalidad: Gestionar tu cita. Derechos: Acceso, rectificación y supresión en sinysol@msn.com. Más info en nuestra <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacidad</a>.', 
+    ca: 'Informació bàsica: Responsable: MOTOR SIN. Finalitat: Gestionar la teva cita. Drets: Accés, rectificació i supressió a sinysol@msn.com. Més info a la nostra <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacitat</a>.' 
+  },
+
+  "form-success-title": { es: "¡Mensaje recibido!", ca: "Missatge rebut!" },
+  "form-success-body": {
+    es: "Arrancamos motores \u2014 nos ponemos en contacto contigo lo antes posible.",
+    ca: "Engegem motors \u2014 et contactarem el m\u00e9s aviat possible."
   },
 
   // Footer
+
   "footer-legal": { es: "Aviso Legal", ca: "Avís Legal" },
   "footer-priv": { es: "Privacidad", ca: "Privacitat" },
   "footer-cookies": { es: "Política de Cookies", ca: "Política de Cookies" },
@@ -118,6 +126,12 @@ const dictionary = {
   
   // WhatsApp Float
   "whatsapp-float-txt": { es: "PEDIR CITA", ca: "DEMANAR CITA" },
+
+  // WhatsApp links bilinguals (emoji encoded, missatge en l'idioma correcte)
+  "wa-link": {
+    es: "https://wa.me/34629934124?text=Hola!%20Estoy%20en%20la%20web%20de%20MOTOR%20SIN%20y%20me%20gustar%C3%ADa%20reservar%20una%20cita%20o%20hacer%20una%20consulta.%20%C2%BFPod%C3%A9is%20ayudarme%3F",
+    ca: "https://wa.me/34629934124?text=Hola!%20S%C3%B3c%20a%20la%20web%20de%20MOTOR%20SIN%20i%20voldria%20reservar%20una%20cita%20o%20fer%20una%20consulta.%20Em%20podeu%20ajudar%3F"
+  },
   
   // Misc
   "scroll-top": { es: "Volver arriba", ca: "Tornar a dalt" },
@@ -127,7 +141,7 @@ const dictionary = {
 function initLanguage() {
   const currentLang = localStorage.getItem('lang') || 'es'; // default Spanish
   
-  const els = document.querySelectorAll('[data-i18n], [data-i18n-title]');
+  const els = document.querySelectorAll('[data-i18n], [data-i18n-title], [data-i18n-href]');
   
   function applyLang(lang) {
     els.forEach(el => {
@@ -156,6 +170,13 @@ function initLanguage() {
         if (dictionary[key] && dictionary[key][lang]) {
           el.setAttribute('title', dictionary[key][lang]);
           el.setAttribute('aria-label', dictionary[key][lang]);
+        }
+      }
+
+      if (el.hasAttribute('data-i18n-href')) {
+        const key = el.getAttribute('data-i18n-href');
+        if (dictionary[key] && dictionary[key][lang]) {
+          el.setAttribute('href', dictionary[key][lang]);
         }
       }
     });

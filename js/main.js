@@ -649,10 +649,10 @@ function openLegalModal(type) {
         title: "Política de Privacidad",
         content: `
           <h3>1. Responsable del Tratamiento</h3>
-          <p><strong>Identidad:</strong> MOTOR SIN – [Nombre del titular o empresa]<br>
-          <strong>NIF:</strong> [INTRODUCIR NIF]<br>
-          <strong>Dirección:</strong> Carrer del Centre, 18, 25001 Lleida.<br>
-          <strong>Email:</strong> info@motorsin.cat</p>
+          <p><strong>Identidad:</strong> MOTORSIN, SL<br>
+          <strong>NIF:</strong> B25304437<br>
+          <strong>Dirección:</strong> C. Centro, nº 18 (25001 Lleida).<br>
+          <strong>Email:</strong> sinysol@msn.com</p>
 
           <h3>2. Finalidad del Tratamiento</h3>
           <p>Los datos personales facilitados (nombre, teléfono, email, matrícula) serán tratados para:</p>
@@ -672,17 +672,17 @@ function openLegalModal(type) {
           <p>No se cederán datos a terceros, salvo obligación legal o que sea estrictamente necesario para la prestación del servicio (ej. proveedores de software de gestión de taller).</p>
 
           <h3>6. Derechos</h3>
-          <p>El usuario tiene derecho a acceder, rectificar y suprimir los datos, así como otros derechos (limitación y oposición), enviando un correo a info@motorsin.cat, adjuntando copia del DNI para su identificación. También tiene derecho a presentar una reclamación ante la Autoridad de Control competente (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tratamiento no se ajusta a la normativa.</p>
+          <p>El usuario tiene derecho a acceder, rectificar y suprimir los datos, así como otros derechos (limitación y oposición), enviando un correo a sinysol@msn.com, adjuntando copia del DNI para su identificación. También tiene derecho a presentar una reclamación ante la Autoridad de Control competente (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tratamiento no se ajusta a la normativa.</p>
         `
       },
       ca: {
         title: "Política de Privacitat",
         content: `
           <h3>1. Responsable del Tractament</h3>
-          <p><strong>Identitat:</strong> MOTOR SIN – [Nom del titular o empresa]<br>
-          <strong>NIF:</strong> [INTRODUIR NIF]<br>
-          <strong>Adreça:</strong> Carrer del Centre, 18, 25001 Lleida.<br>
-          <strong>Email:</strong> info@motorsin.cat</p>
+          <p><strong>Identitat:</strong> MOTORSIN, SL<br>
+          <strong>NIF:</strong> B25304437<br>
+          <strong>Adreça:</strong> C. Centre, núm. 18 (25001 Lleida).<br>
+          <strong>Email:</strong> sinysol@msn.com</p>
 
           <h3>2. Finalitat del Tractament</h3>
           <p>Les dades personals facilitades (nom, telèfon, email, matrícula) seran tractades per a:</p>
@@ -702,7 +702,7 @@ function openLegalModal(type) {
           <p>No se cediran dades a tercers, excepte obligació legal o que sigui estrictament necessari per a la prestació del servei (ex: proveïdors de programari de gestió de taller).</p>
 
           <h3>6. Drets</h3>
-          <p>L'usuari té dret a accedir, rectificar i suprimir les dades, així com altres drets (limitació i oposició), enviant un correu a info@motorsin.cat, adjuntant còpia del DNI per a la seva identificació. També té dret a presentar una reclamació davant l'Autoritat de Control competent (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tractament no s'ajusta a la normativa.</p>
+          <p>L'usuari té dret a accedir, rectificar i suprimir les dades, així com altres drets (limitació i oposició), enviant un correu a sinysol@msn.com, adjuntant còpia del DNI per a la seva identificació. També té dret a presentar una reclamació davant l'Autoritat de Control competent (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tractament no s'ajusta a la normativa.</p>
         `
       }
     },
@@ -712,12 +712,12 @@ function openLegalModal(type) {
         content: `
           <h3>1. Datos Identificativos</h3>
           <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE), se exponen los datos identificativos del titular:</p>
-          <p><strong>Titular:</strong> [Nombre Completo del Autónomo o Razón Social de la Empresa] (MOTOR SIN)<br>
-          <strong>NIF/CIF:</strong> [INTRODUCIR NIF AQUÍ - Obligatorio]<br>
-          <strong>Domicilio:</strong> Carrer del Centre, 18, 25001 Lleida.<br>
-          <strong>Correo electrónico:</strong> info@motorsin.cat<br>
-          <strong>Teléfono:</strong> 973 21 11 89<br>
-          <strong>Datos de registro:</strong> [Si es una SL, se deben indicar los datos del Registro Mercantil de Lleida: Tomo, Folio, Hoja].</p>
+          <p><strong>Titular:</strong> MOTORSIN, SL<br>
+          <strong>NIF/CIF:</strong> B25304437<br>
+          <strong>Domicilio:</strong> C. Centro, nº 18 (25001 Lleida).<br>
+          <strong>Correo electrónico:</strong> sinysol@msn.com<br>
+          <strong>Teléfono:</strong> 973 21 11 89 / 629 93 41 24<br>
+          <strong>Datos de registro:</strong> Inscrita en el Registro Mercantil de Lleida.</p>
 
           <h3>2. Propiedad Intelectual</h3>
           <p>El código fuente, los diseños gráficos, las imágenes, las fotografías, los sonidos, las animaciones, el software, los textos, así como la información y los contenidos que se recogen en este sitio web están protegidos por la legislación española sobre los derechos de propiedad intelectual e industrial a favor de MOTOR SIN. No se permite la reproducción y/o publicación, total o parcial, del sitio web, ni su tratamiento informático, su distribución, difusión, ni modificación o transformación sin el permiso previo y por escrito de MOTOR SIN.</p>
@@ -731,12 +731,12 @@ function openLegalModal(type) {
         content: `
           <h3>1. Dades Identificatives</h3>
           <p>En compliment de l'article 10 de la Llei 34/2002, d'11 de juliol, de Serveis de la Societat de la Informació i Comerç Electrònic (LSSI-CE), s'exposen les dades identificatives del titular:</p>
-          <p><strong>Titular:</strong> [Nom Complet de l'Autònom o Raó Social de l'Empresa] (MOTOR SIN)<br>
-          <strong>NIF/CIF:</strong> [INTRODUIR NIF AQUÍ - Obligatori]<br>
-          <strong>Domicili:</strong> Carrer del Centre, 18, 25001 Lleida.<br>
-          <strong>Correu electrònic:</strong> info@motorsin.cat<br>
-          <strong>Telèfon:</strong> 973 21 11 89<br>
-          <strong>Dades de registre:</strong> [Si és una SL, cal posar les dades del Registre Mercantil de Lleida: Tom, Foli, Full].</p>
+          <p><strong>Titular:</strong> MOTORSIN, SL<br>
+          <strong>NIF/CIF:</strong> B25304437<br>
+          <strong>Domicili:</strong> C. Centre, núm. 18 (25001 Lleida).<br>
+          <strong>Correu electrònic:</strong> sinysol@msn.com<br>
+          <strong>Telèfon:</strong> 973 21 11 89 / 629 93 41 24<br>
+          <strong>Dades de registre:</strong> Inscrita al Registre Mercantil de Lleida.</p>
 
           <h3>2. Propietat Intel·lectual</h3>
           <p>El codi font, els dissenys gràfics, les imatges, les fotografies, els sons, les animacions, el programari, els textos, així com la informació i els continguts que es recullen en aquest lloc web estan protegits per la legislació espanyola sobre els drets de propietat intel·lectual i industrial a favor de MOTOR SIN. No es permet la reproducció i/o publicació, total o parcial, del lloc web, ni el seu tractament informàtic, la seva distribució, difusió, ni modificació o transformació sense el permís previ i per escrit de MOTOR SIN.</p>
@@ -799,6 +799,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroScramble();
   initScrollReveal();
   initMagneticButtons();
+  initFormHandler();
   initScrollTop();
   initCountingStats();
   init3DCards();
@@ -806,8 +807,71 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================
-   10. 3D SERVICES CARDS
+   7. FORM HANDLER (AJAX — sense redireccions FormSubmit)
    ========================================== */
+function initFormHandler() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const successEl = form.querySelector('.form-success');
+  const submitBtn = form.querySelector('#form-submit-btn');
+
+  // Elements que amagarem quan l'enviament tingui exit
+  const hideOnSuccess = [
+    form.querySelector('.form-title-wrap'),
+    form.querySelector('.form-grid'),
+    form.querySelector('.form-checkbox'),
+    submitBtn,
+    form.querySelector('.form-legal-footer')
+  ];
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Estat de carrega al boto
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.6';
+      submitBtn.style.cursor = 'wait';
+    }
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/oskar.rodrigo@gmail.com', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        // Amaga els camps del formulari
+        hideOnSuccess.forEach(el => {
+          if (el) el.style.display = 'none';
+        });
+        // Mostra el missatge d'exit personalitzat
+        if (successEl) successEl.classList.add('active');
+        form.reset();
+      } else {
+        throw new Error('Error en la resposta del servidor');
+      }
+    } catch (err) {
+      // Restaura el boto si hi ha error
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+        submitBtn.style.cursor = '';
+      }
+      const lang = localStorage.getItem('lang') || 'es';
+      const msg = lang === 'ca'
+        ? 'Hi ha hagut un error. Torna-ho a intentar o contacta\'ns per WhatsApp.'
+        : 'Ha habido un error. Inténtalo de nuevo o contacta con nosotros por WhatsApp.';
+      alert(msg);
+    }
+  });
+}
+
+
 function init3DCards() {
   const wrappers = document.querySelectorAll('.service-card-wrapper');
   
