@@ -53,9 +53,9 @@ function initNeonCursor() {
   /* Draw the steering wheel with 3 nested glow passes */
   function drawWheel(x, y, r, rot) {
     const layers = [
-      { blur: 44, width: 6,   rgb: '30,111,245',  op: 0.28 },
-      { blur: 18, width: 3.5, rgb: '80,160,255',  op: 0.62 },
-      { blur:  4, width: 1.8, rgb: '215,232,255', op: 1.00 },
+      { blur: 44, width: 6,   rgb: '192,0,26',    op: 0.28 },
+      { blur: 18, width: 3.5, rgb: '255,60,80',   op: 0.62 },
+      { blur:  4, width: 1.8, rgb: '255,200,205', op: 1.00 },
     ];
 
     ctx.save();
@@ -131,7 +131,7 @@ function initNeonCursor() {
       const gBlur  = [24, 12, 4][j];
       const gOpac  = [0.3, 0.6, 1.0][j];
 
-      ctx.shadowColor = `rgba(30,111,245,${gOpac})`;
+      ctx.shadowColor = `rgba(192,0,26,${gOpac})`;
       ctx.shadowBlur  = gBlur;
       ctx.lineWidth   = gWidth;
 
@@ -141,7 +141,7 @@ function initNeonCursor() {
 
         ctx.beginPath();
         // Fade out the tail opacity based on distance
-        ctx.strokeStyle = `rgba(30,111,245,${t * t * gOpac})`;
+        ctx.strokeStyle = `rgba(192,0,26,${t * t * gOpac})`;
         ctx.moveTo(trail[i].x, trail[i].y);
         ctx.lineTo(trail[i+1].x, trail[i+1].y);
         ctx.stroke();
@@ -649,7 +649,7 @@ function openLegalModal(type) {
         title: "Política de Privacidad",
         content: `
           <h3>1. Responsable del Tratamiento</h3>
-          <p><strong>Identidad:</strong> MOTORSIN, SL<br>
+          <p><strong>Identidad:</strong> Sin i Solé Motors, SL<br>
           <strong>NIF:</strong> B25304437<br>
           <strong>Dirección:</strong> C. Centro, nº 18 (25001 Lleida).<br>
           <strong>Email:</strong> sinysol@msn.com</p>
@@ -679,7 +679,7 @@ function openLegalModal(type) {
         title: "Política de Privacitat",
         content: `
           <h3>1. Responsable del Tractament</h3>
-          <p><strong>Identitat:</strong> MOTORSIN, SL<br>
+          <p><strong>Identitat:</strong> Sin i Solé Motors, SL<br>
           <strong>NIF:</strong> B25304437<br>
           <strong>Adreça:</strong> C. Centre, núm. 18 (25001 Lleida).<br>
           <strong>Email:</strong> sinysol@msn.com</p>
@@ -712,7 +712,7 @@ function openLegalModal(type) {
         content: `
           <h3>1. Datos Identificativos</h3>
           <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE), se exponen los datos identificativos del titular:</p>
-          <p><strong>Titular:</strong> MOTORSIN, SL<br>
+          <p><strong>Titular:</strong> Sin i Solé Motors, SL<br>
           <strong>NIF/CIF:</strong> B25304437<br>
           <strong>Domicilio:</strong> C. Centro, nº 18 (25001 Lleida).<br>
           <strong>Correo electrónico:</strong> sinysol@msn.com<br>
@@ -720,10 +720,10 @@ function openLegalModal(type) {
           <strong>Datos de registro:</strong> Inscrita en el Registro Mercantil de Lleida.</p>
 
           <h3>2. Propiedad Intelectual</h3>
-          <p>El código fuente, los diseños gráficos, las imágenes, las fotografías, los sonidos, las animaciones, el software, los textos, así como la información y los contenidos que se recogen en este sitio web están protegidos por la legislación española sobre los derechos de propiedad intelectual e industrial a favor de MOTOR SIN. No se permite la reproducción y/o publicación, total o parcial, del sitio web, ni su tratamiento informático, su distribución, difusión, ni modificación o transformación sin el permiso previo y por escrito de MOTOR SIN.</p>
+          <p>El código fuente, los diseños gráficos, las imágenes, las fotografías, los sonidos, las animaciones, el software, los textos, así como la información y los contenidos que se recogen en este sitio web están protegidos por la legislación española sobre los derechos de propiedad intelectual e industrial a favor de Sin i Solé Motors, SL. No se permite la reproducción y/o publicación, total o parcial, del sitio web, ni su tratamiento informático, su distribución, difusión, ni modificación o transformación sin el permiso previo y por escrito de Sin i Solé Motors, SL.</p>
 
           <h3>3. Exclusión de Responsabilidad</h3>
-          <p>MOTOR SIN no se hace responsable de los daños y perjuicios de cualquier naturaleza que pudieran derivarse de la falta de disponibilidad, mantenimiento y efectivo funcionamiento de la web o de sus servicios y contenidos.</p>
+          <p>Sin i Solé Motors, SL no se hace responsable de los daños y perjuicios de cualquier naturaleza que pudieran derivarse de la falta de disponibilidad, mantenimiento y efectivo funcionamiento de la web o de sus servicios y contenidos.</p>
         `
       },
       ca: {
@@ -731,7 +731,7 @@ function openLegalModal(type) {
         content: `
           <h3>1. Dades Identificatives</h3>
           <p>En compliment de l'article 10 de la Llei 34/2002, d'11 de juliol, de Serveis de la Societat de la Informació i Comerç Electrònic (LSSI-CE), s'exposen les dades identificatives del titular:</p>
-          <p><strong>Titular:</strong> MOTORSIN, SL<br>
+          <p><strong>Titular:</strong> Sin i Solé Motors, SL<br>
           <strong>NIF/CIF:</strong> B25304437<br>
           <strong>Domicili:</strong> C. Centre, núm. 18 (25001 Lleida).<br>
           <strong>Correu electrònic:</strong> sinysol@msn.com<br>
@@ -739,10 +739,10 @@ function openLegalModal(type) {
           <strong>Dades de registre:</strong> Inscrita al Registre Mercantil de Lleida.</p>
 
           <h3>2. Propietat Intel·lectual</h3>
-          <p>El codi font, els dissenys gràfics, les imatges, les fotografies, els sons, les animacions, el programari, els textos, així com la informació i els continguts que es recullen en aquest lloc web estan protegits per la legislació espanyola sobre els drets de propietat intel·lectual i industrial a favor de MOTOR SIN. No es permet la reproducció i/o publicació, total o parcial, del lloc web, ni el seu tractament informàtic, la seva distribució, difusió, ni modificació o transformació sense el permís previ i per escrit de MOTOR SIN.</p>
+          <p>El codi font, els dissenys gràfics, les imatges, les fotografies, els sons, les animacions, el programari, els textos, així com la informació i els continguts que es recullen en aquest lloc web estan protegits per la legislació espanyola sobre els drets de propietat intel·lectual i industrial a favor de Sin i Solé Motors, SL. No es permet la reproducció i/o publicació, total o parcial, del lloc web, ni el seu tractament informàtic, la seva distribució, difusió, ni modificació o transformació sense el permís previ i per escrit de Sin i Solé Motors, SL.</p>
 
           <h3>3. Exclusió de Responsabilitat</h3>
-          <p>MOTOR SIN no es fa responsable dels danys i perjudicis de qualsevol naturalesa que poguessin derivar-se de la manca de disponibilitat, manteniment i efectiu funcionament del web o dels seus serveis i continguts.</p>
+          <p>Sin i Solé Motors, SL no es fa responsable dels danys i perjudicis de qualsevol naturalesa que poguessin derivar-se de la manca de disponibilitat, manteniment i efectiu funcionament del web o dels seus serveis i continguts.</p>
         `
       }
     },
