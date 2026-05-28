@@ -78,7 +78,7 @@ const dictionary = {
   
   "contact-loc-title": { es: "Dirección", ca: "Adreça" },
   "contact-addr-val":  { es: "C. Centro, nº 18 (25001 Lleida)", ca: "C. Centre, núm. 18 (25001 Lleida)" },
-  "contact-tel-label": { es: "Teléfono", ca: "Telèfon" },
+  "contact-tel-label": { es: "Contactar v\u00eda WhatsApp", ca: "Contactar via WhatsApp" },
   "contact-email-label": { es: "Correo electrónico", ca: "Correu electrònic" },
   "contact-time-label": { es: "Horario", ca: "Horari" },
   "contact-time-val": { es: "Lunes a Viernes<br>08:30 – 13:30<br>16:00 – 19:00", ca: "Dilluns a Divendres<br>08:30 – 13:30<br>16:00 – 19:00" },
