@@ -642,6 +642,8 @@ function openLegalModal(type) {
   if (!modal || !title || !body) return;
 
   const lang = localStorage.getItem('lang') || 'es';
+
+  const texts = {
     privacitat: {
       es: {
         title: "Política de Privacidad",
