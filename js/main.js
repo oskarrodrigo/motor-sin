@@ -642,8 +642,6 @@ function openLegalModal(type) {
   if (!modal || !title || !body) return;
 
   const lang = localStorage.getItem('lang') || 'es';
-
-  const texts = {
     privacitat: {
       es: {
         title: "Política de Privacidad",
@@ -652,8 +650,8 @@ function openLegalModal(type) {
           <p><strong>Identidad:</strong> Sin i Solé Motors, SL<br>
           <strong>NIF:</strong> B25304437<br>
           <strong>Dirección:</strong> C. Centro, nº 18 (25001 Lleida).<br>
-          <strong>Email:</strong> sinysol@msn.com</p>
-
+          <strong>Email:</strong> sinysole@msn.com</p>
+ 
           <h3>2. Finalidad del Tratamiento</h3>
           <p>Los datos personales facilitados (nombre, teléfono, email, matrícula) serán tratados para:</p>
           <ul>
@@ -661,18 +659,18 @@ function openLegalModal(type) {
             <li>Enviar presupuestos e información sobre el estado de la reparación del vehículo.</li>
             <li>Responder a consultas realizadas a través del formulario de contacto o WhatsApp.</li>
           </ul>
-
+ 
           <h3>3. Legitimación</h3>
           <p>El tratamiento de sus datos se basa en el consentimiento explícito del interesado al marcar la casilla de aceptación del formulario y, posteriormente, en la ejecución de una relación precontractual o contractual de servicios mecánicos.</p>
-
+ 
           <h3>4. Conservación de los datos</h3>
           <p>Los datos se conservarán durante el tiempo necesario para la prestación del servicio solicitado y, en todo caso, durante los plazos legales exigidos por la normativa fiscal y mercantil.</p>
-
+ 
           <h3>5. Destinatarios</h3>
           <p>No se cederán datos a terceros, salvo obligación legal o que sea estrictamente necesario para la prestación del servicio (ej. proveedores de software de gestión de taller).</p>
-
+ 
           <h3>6. Derechos</h3>
-          <p>El usuario tiene derecho a acceder, rectificar y suprimir los datos, así como otros derechos (limitación y oposición), enviando un correo a sinysol@msn.com, adjuntando copia del DNI para su identificación. También tiene derecho a presentar una reclamación ante la Autoridad de Control competente (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tratamiento no se ajusta a la normativa.</p>
+          <p>El usuario tiene derecho a acceder, rectificar y suprimir los datos, así como otros derechos (limitación y oposición), enviando un correo a sinysole@msn.com, adjuntando copia del DNI para su identificación. También tiene derecho a presentar una reclamación ante la Autoridad de Control competente (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tratamiento no se ajusta a la normativa.</p>
         `
       },
       ca: {
@@ -682,8 +680,8 @@ function openLegalModal(type) {
           <p><strong>Identitat:</strong> Sin i Solé Motors, SL<br>
           <strong>NIF:</strong> B25304437<br>
           <strong>Adreça:</strong> C. Centre, núm. 18 (25001 Lleida).<br>
-          <strong>Email:</strong> sinysol@msn.com</p>
-
+          <strong>Email:</strong> sinysole@msn.com</p>
+ 
           <h3>2. Finalitat del Tractament</h3>
           <p>Les dades personals facilitades (nom, telèfon, email, matrícula) seran tractades per a:</p>
           <ul>
@@ -691,18 +689,18 @@ function openLegalModal(type) {
             <li>Enviar pressupostos i informació sobre l'estat de la reparació del vehicle.</li>
             <li>Respondre a consultes realitzades a través del formulari de contacte o WhatsApp.</li>
           </ul>
-
+ 
           <h3>3. Legitimació</h3>
           <p>El tractament de les seves dades es basa en el consentiment explícit de l'interessat en marcar la casella d'acceptació del formulari i, posteriorment, en l'execució d'una relació precontractual o contractual de serveis mecànics.</p>
-
+ 
           <h3>4. Conservació de les dades</h3>
           <p>Les dades es conservaran durant el temps necessari per a la prestació del servei sol·licitat i, en tot cas, durant els terminis legals exigits per la normativa fiscal i mercantil.</p>
-
+ 
           <h3>5. Destinataris</h3>
           <p>No se cediran dades a tercers, excepte obligació legal o que sigui estrictament necessari per a la prestació del servei (ex: proveïdors de programari de gestió de taller).</p>
-
+ 
           <h3>6. Drets</h3>
-          <p>L'usuari té dret a accedir, rectificar i suprimir les dades, així com altres drets (limitació i oposició), enviant un correu a sinysol@msn.com, adjuntant còpia del DNI per a la seva identificació. També té dret a presentar una reclamació davant l'Autoritat de Control competent (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tractament no s'ajusta a la normativa.</p>
+          <p>L'usuari té dret a accedir, rectificar i suprimir les dades, així com altres drets (limitació i oposició), enviant un correu a sinysole@msn.com, adjuntant còpia del DNI per a la seva identificació. També té dret a presentar una reclamació davant l'Autoritat de Control competent (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tractament no s'ajusta a la normativa.</p>
         `
       }
     },
@@ -715,13 +713,13 @@ function openLegalModal(type) {
           <p><strong>Titular:</strong> Sin i Solé Motors, SL<br>
           <strong>NIF/CIF:</strong> B25304437<br>
           <strong>Domicilio:</strong> C. Centro, nº 18 (25001 Lleida).<br>
-          <strong>Correo electrónico:</strong> sinysol@msn.com<br>
+          <strong>Correo electrónico:</strong> sinysole@msn.com<br>
           <strong>Teléfono:</strong> 973 21 11 89 / 629 93 41 24<br>
           <strong>Datos de registro:</strong> Inscrita en el Registro Mercantil de Lleida.</p>
-
+ 
           <h3>2. Propiedad Intelectual</h3>
           <p>El código fuente, los diseños gráficos, las imágenes, las fotografías, los sonidos, las animaciones, el software, los textos, así como la información y los contenidos que se recogen en este sitio web están protegidos por la legislación española sobre los derechos de propiedad intelectual e industrial a favor de Sin i Solé Motors, SL. No se permite la reproducción y/o publicación, total o parcial, del sitio web, ni su tratamiento informático, su distribución, difusión, ni modificación o transformación sin el permiso previo y por escrito de Sin i Solé Motors, SL.</p>
-
+ 
           <h3>3. Exclusión de Responsabilidad</h3>
           <p>Sin i Solé Motors, SL no se hace responsable de los daños y perjuicios de cualquier naturaleza que pudieran derivarse de la falta de disponibilidad, mantenimiento y efectivo funcionamiento de la web o de sus servicios y contenidos.</p>
         `
@@ -734,13 +732,13 @@ function openLegalModal(type) {
           <p><strong>Titular:</strong> Sin i Solé Motors, SL<br>
           <strong>NIF/CIF:</strong> B25304437<br>
           <strong>Domicili:</strong> C. Centre, núm. 18 (25001 Lleida).<br>
-          <strong>Correu electrònic:</strong> sinysol@msn.com<br>
+          <strong>Correu electrònic:</strong> sinysole@msn.com<br>
           <strong>Telèfon:</strong> 973 21 11 89 / 629 93 41 24<br>
           <strong>Dades de registre:</strong> Inscrita al Registre Mercantil de Lleida.</p>
-
+ 
           <h3>2. Propietat Intel·lectual</h3>
           <p>El codi font, els dissenys gràfics, les imatges, les fotografies, els sons, les animacions, el programari, els textos, així com la informació i els continguts que es recullen en aquest lloc web estan protegits per la legislació espanyola sobre els drets de propietat intel·lectual i industrial a favor de Sin i Solé Motors, SL. No es permet la reproducció i/o publicació, total o parcial, del lloc web, ni el seu tractament informàtic, la seva distribució, difusió, ni modificació o transformació sense el permís previ i per escrit de Sin i Solé Motors, SL.</p>
-
+ 
           <h3>3. Exclusió de Responsabilitat</h3>
           <p>Sin i Solé Motors, SL no es fa responsable dels danys i perjudicis de qualsevol naturalesa que poguessin derivar-se de la manca de disponibilitat, manteniment i efectiu funcionament del web o dels seus serveis i continguts.</p>
         `

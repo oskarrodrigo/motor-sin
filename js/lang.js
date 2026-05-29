@@ -105,8 +105,8 @@ const dictionary = {
     ca: 'Accepto la <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacitat</a>.' 
   },
   "form-legal-footer": { 
-    es: 'Información básica: Responsable: Sin i Solé Motors, SL. Finalidad: Gestionar tu cita. Derechos: Acceso, rectificación y supresión en sinysol@msn.com. Más info en nuestra <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacidad</a>.', 
-    ca: 'Informació bàsica: Responsable: Sin i Solé Motors, SL. Finalitat: Gestionar la teva cita. Drets: Accés, rectificació i supressió a sinysol@msn.com. Més info a la nostra <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacitat</a>.' 
+    es: 'Información básica: Responsable: Sin i Solé Motors, SL. Finalidad: Gestionar tu cita. Derechos: Acceso, rectificación y supresión en sinysole@msn.com. Más info en nuestra <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacidad</a>.', 
+    ca: 'Informació bàsica: Responsable: Sin i Solé Motors, SL. Finalitat: Gestionar la teva cita. Drets: Accés, rectificació i supressió a sinysole@msn.com. Més info a la nostra <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacitat</a>.' 
   },
 
   "form-success-title": { es: "¡Mensaje recibido!", ca: "Missatge rebut!" },
