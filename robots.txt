@@ -1,0 +1,8 @@
+# robots.txt — MOTOR SIN
+
+User-agent: *
+Allow: /
+Disallow: /node.js/
+Disallow: /public/cursor/
+
+Sitemap: https://www.motorsin.cat/sitemap.xml

@@ -2,8 +2,9 @@
    MOTOR SIN — Design System & Styles
    ========================================= */
 
-/* --- Google Fonts Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+/* --- Google Fonts ---
+   Carregades via <link> al <head> d'index.html.
+   @import eliminat per evitar double-loading i bloqueig del renderitzat. */
 
 /* --- CSS Custom Properties (Tokens) --- */
 :root {
@@ -1492,6 +1493,41 @@ section {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
+
+/* =========================================
+   FOCUS VISIBLE — Accessibilitat teclat (WCAG 2.1 AA)
+   Només apareix amb navegació per teclat (Tab),
+   no amb clic de ratolí, gràcies a :focus-visible.
+   ========================================= */
+*:focus-visible {
+  outline: 3px solid var(--color-red);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Per a botons amb border-radius arrodonit */
+.nav__cta:focus-visible,
+.btn-magnetic:focus-visible,
+.form-submit:focus-visible,
+.whatsapp-float:focus-visible,
+.scroll-top:focus-visible,
+.modal__close:focus-visible {
+  outline-offset: 4px;
+  border-radius: var(--radius-xl);
+}
+
+/* Form inputs: substituir outline per box-shadow coherent */
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+  outline: none;
+  border-color: var(--color-red);
+  box-shadow: 0 0 0 3px rgba(192, 0, 26, 0.25);
+}
+
+/* Amagar focus-visible en mòbils tàctils (no necessari) */
+@media (hover: none) and (pointer: coarse) {
+  *:focus-visible { outline: none; }
+}
 
 /* =========================================
    MOBILE MENU OVERLAY
