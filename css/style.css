@@ -923,6 +923,29 @@ section {
 }
 
 /* =========================================
+   AVISOS DE CONTINGUT GENERAT AMB IA (Reglament UE 2024/1689, art. 50)
+   ========================================= */
+.ai-label {
+  position: absolute;
+  z-index: 6;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(13, 17, 23, 0.72);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.ai-label--video  { top: 0.8rem; left: 0.8rem; }
+.ai-label--slider { top: 1.1rem; left: 1.1rem; }
+
+/* =========================================
    REVIEWS (GOOGLE)
    ========================================= */
 .reviews {
@@ -1285,6 +1308,13 @@ section {
   font-size: 0.82rem;
   color: rgba(255,255,255,0.35);
   margin: 0;
+}
+
+.footer__ai {
+  margin: 0.35rem 0 0;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.3);
 }
 
 .footer__link {

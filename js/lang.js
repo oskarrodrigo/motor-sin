@@ -110,6 +110,15 @@ const dictionary = {
   "footer-creator": { es: "Hecho con el", ca: "Fet amb el" },
   "footer-creator-by": { es: "por", ca: "per" },
   
+  "footer-ai": {
+    es: "Las imágenes y el vídeo de esta web se han generado o editado con inteligencia artificial.",
+    ca: "Les imatges i el vídeo d'aquest web s'han generat o editat amb intel·ligència artificial."
+  },
+
+  // Avisos de contingut generat amb IA
+  "ai-label-video": { es: "Vídeo generado con IA", ca: "Vídeo generat amb IA" },
+  "ai-label-photos": { es: "Fotos del taller editadas con IA", ca: "Fotos del taller editades amb IA" },
+
   // WhatsApp Float
   "whatsapp-float-txt": { es: "PEDIR CITA", ca: "DEMANAR CITA" },
 

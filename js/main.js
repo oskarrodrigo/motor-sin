@@ -704,7 +704,15 @@ function openLegalModal(type) {
           <h3>2. Propiedad Intelectual</h3>
           <p>El código fuente, los diseños gráficos, las imágenes, las fotografías, los sonidos, las animaciones, el software, los textos, así como la información y los contenidos que se recogen en este sitio web están protegidos por la legislación española sobre los derechos de propiedad intelectual e industrial a favor de Sin i Solé Motors, SL. No se permite la reproducción y/o publicación, total o parcial, del sitio web, ni su tratamiento informático, su distribución, difusión, ni modificación o transformación sin el permiso previo y por escrito de Sin i Solé Motors, SL.</p>
  
-          <h3>3. Exclusión de Responsabilidad</h3>
+          <h3>3. Uso de inteligencia artificial</h3>
+          <p>De acuerdo con el artículo 50 del Reglamento (UE) 2024/1689 de Inteligencia Artificial, informamos de que:</p>
+          <ul>
+            <li>Las fotografías del taller son imágenes reales de nuestras instalaciones, editadas y retocadas con herramientas de inteligencia artificial.</li>
+            <li>El vídeo de portada y las ilustraciones de los servicios se han generado con inteligencia artificial.</li>
+            <li>El diseño y los textos de la web se han elaborado con ayuda de herramientas de inteligencia artificial y han sido revisados por Sin i Solé Motors, SL.</li>
+          </ul>
+
+          <h3>4. Exclusión de Responsabilidad</h3>
           <p>Sin i Solé Motors, SL no se hace responsable de los daños y perjuicios de cualquier naturaleza que pudieran derivarse de la falta de disponibilidad, mantenimiento y efectivo funcionamiento de la web o de sus servicios y contenidos.</p>
         `
       },
@@ -723,7 +731,15 @@ function openLegalModal(type) {
           <h3>2. Propietat Intel·lectual</h3>
           <p>El codi font, els dissenys gràfics, les imatges, les fotografies, els sons, les animacions, el programari, els textos, així com la informació i els continguts que es recullen en aquest lloc web estan protegits per la legislació espanyola sobre els drets de propietat intel·lectual i industrial a favor de Sin i Solé Motors, SL. No es permet la reproducció i/o publicació, total o parcial, del lloc web, ni el seu tractament informàtic, la seva distribució, difusió, ni modificació o transformació sense el permís previ i per escrit de Sin i Solé Motors, SL.</p>
  
-          <h3>3. Exclusió de Responsabilitat</h3>
+          <h3>3. Ús d'intel·ligència artificial</h3>
+          <p>D'acord amb l'article 50 del Reglament (UE) 2024/1689 d'Intel·ligència Artificial, informem que:</p>
+          <ul>
+            <li>Les fotografies del taller són imatges reals de les nostres instal·lacions, editades i retocades amb eines d'intel·ligència artificial.</li>
+            <li>El vídeo de portada i les il·lustracions dels serveis s'han generat amb intel·ligència artificial.</li>
+            <li>El disseny i els textos del web s'han elaborat amb l'ajuda d'eines d'intel·ligència artificial i han estat revisats per Sin i Solé Motors, SL.</li>
+          </ul>
+
+          <h3>4. Exclusió de Responsabilitat</h3>
           <p>Sin i Solé Motors, SL no es fa responsable dels danys i perjudicis de qualsevol naturalesa que poguessin derivar-se de la manca de disponibilitat, manteniment i efectiu funcionament del web o dels seus serveis i continguts.</p>
         `
       }
