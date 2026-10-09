@@ -93,11 +93,12 @@ const dictionary = {
     es: "Respondemos todos los mensajes, aunque quizá no al momento: primero van las reparaciones que tenemos entre manos. Cuéntanos qué le pasa al coche y la matrícula, y te contestaremos en cuanto podamos.",
     ca: "Responem tots els missatges, tot i que potser no al moment: primer van les reparacions que tenim entre mans. Explica'ns què li passa al cotxe i la matrícula, i et contestarem tan aviat com puguem."
   },
-  "contact-cta": { es: 'Enviar WhatsApp <span class="nowrap">· 629 93 41 24</span>', ca: 'Enviar WhatsApp <span class="nowrap">· 629 93 41 24</span>' },
+  "contact-cta": { es: 'Enviar WhatsApp <span class="nowrap"><span class="cta-sep">· </span>629 93 41 24</span>', ca: 'Enviar WhatsApp <span class="nowrap"><span class="cta-sep">· </span>629 93 41 24</span>' },
 
   "contact-loc-title": { es: "Dirección", ca: "Adreça" },
   "contact-addr-val":  { es: "C. Centro, nº 18 (25001 Lleida)", ca: "C. Centre, núm. 18 (25001 Lleida)" },
   "contact-time-label": { es: "Horario", ca: "Horari" },
+  "contact-email-label": { es: "Correo electrónico", ca: "Correu electrònic" },
   "contact-time-val": { es: "Lunes a Viernes<br>08:30 – 13:30 · 16:00 – 19:00", ca: "Dilluns a Divendres<br>08:30 – 13:30 · 16:00 – 19:00" },
 
   // Footer

@@ -1178,13 +1178,29 @@ section {
 }
 .btn-whatsapp:active { box-shadow: 0 4px 10px rgba(37, 211, 102, 0.35); }
 
+/* Adreça · Horari · Correu: icona a sobre i text centrat */
 .contact__info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-md) var(--space-2xl);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg) var(--space-md);
   margin-top: var(--space-xl);
-  text-align: left;
+}
+
+.contact__info .contact-info-item {
+  flex-direction: column;
+  gap: 0.7rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .contact__info {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  /* Al botó de WhatsApp, el número va a la segona línia, sense el punt */
+  .contact__cta .nowrap { display: block; }
+  .contact__cta .cta-sep { display: none; }
 }
 
 .contact-info-item strong {
