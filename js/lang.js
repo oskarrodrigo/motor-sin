@@ -4,13 +4,13 @@ const dictionary = {
 
   // Navigation
   "nav-serveis": { es: "Servicios", ca: "Serveis" },
-  "nav-qui-som": { es: "Quiénes Somos", ca: "Qui Som" },
+  "nav-taller": { es: "El Taller", ca: "El Taller" },
   "nav-contacte": { es: "Contacto", ca: "Contacte" },
   "nav-cta-whatsapp": { es: "PEDIR CITA", ca: "DEMANAR CITA" },
   "mob-inici": { es: "Inicio", ca: "Inici" },
 
   // Hero Section
-  "hero-antetitle": { es: "TRADICIÓN Y TECNOLOGÍA · LLEIDA", ca: "TRADICIÓ I TECNOLOGIA · LLEIDA" },
+  "hero-antetitle": { es: "MECÁNICA Y ELECTRÓNICA · LLEIDA", ca: "MECÀNICA I ELECTRÒNICA · LLEIDA" },
   "hero-subtitle": { 
     es: "Conocemos tu vehículo desde el último tornillo hasta el sistema electrónico más complejo. No nos limitamos a cambiar piezas; entendemos cómo encajan para reconstruir el rendimiento original de tu coche. La mecánica de precisión que tu motor exige.", 
     ca: "Coneixem el teu vehicle des de l'últim cargol fins al sistema electrònic més complex. No ens limitem a canviar peces; entenem com encaixen per reconstruir el rendiment original del teu cotxe. La mecànica de precisió que el teu motor demana." 
@@ -21,17 +21,17 @@ const dictionary = {
 
   // Trust Strip
   "trust-1": { es: "Garantía en todos los trabajos", ca: "Garantia en tots els treballs" },
-  "trust-2": { es: "Presupuesto en 24h", ca: "Pressupost en 24h" },
+  "trust-2": { es: "Presupuesto en 24-48h", ca: "Pressupost en 24-48h" },
   "trust-3": { es: "Sin sorpresas en la factura", ca: "Sense sorpreses a la factura" },
-  "trust-4": { es: "3 Generaciones de familia", ca: "3 Generacions de família" },
+  "trust-4": { es: "Todo tipo de vehículos", ca: "Tot tipus de vehicles" },
   "trust-5": { es: "Diagnóstico de última generación", ca: "Diagnòstic d'última generació" },
 
   // Services
   "services-label": { es: "Nuestros servicios", ca: "Els nostres serveis" },
   "services-title": { es: "Soluciones para tu vehículo,<br>no simples reparaciones.", ca: "Solucions per al teu vehicle,<br>no simples reparacions." },
   "services-subtitle": { 
-    es: "Cada vehículo es único. Combinamos la experiencia de 3 generaciones con la tecnología más avanzada para garantizar que tu coche funcione como el primer&nbsp;día.", 
-    ca: "Cada vehicle és únic. Combinem l'experiència de 3 generacions amb la tecnologia més avançada per garantir que el teu cotxe funcioni com el primer&nbsp;dia." 
+    es: "Cada vehículo es único. Combinamos años de experiencia en mecánica y electrónica con la tecnología de diagnóstico más avanzada para que tu coche funcione como el primer&nbsp;día.",
+    ca: "Cada vehicle és únic. Combinem anys d'experiència en mecànica i electrònica amb la tecnologia de diagnosi més avançada perquè el teu cotxe funcioni com el primer&nbsp;dia."
   },
 
   "card-diag-title": { es: "El cerebro de tu coche, al descubierto.", ca: "El cervell del teu cotxe, al descobert." },
@@ -39,7 +39,7 @@ const dictionary = {
   "card-diag-link": { es: 'Pedir diagnóstico <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>', ca: 'Demanar diagnòstic <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>' },
 
   "card-mant-title": { es: "Pasa la ITV a la primera.", ca: "Passa la ITV a la primera." },
-  "card-mant-text": { es: "Cambios de aceite, filtros, frenos y revisión completa de los 40 puntos críticos. Alargamos la vida útil de tu motor con mantenimiento preventivo experto.", ca: "Canvis d'oli, filtres, frens i revisió completa dels 40 punts crítics. Allarguem la vida útil del teu motor amb manteniment preventivo expert." },
+  "card-mant-text": { es: "Cambios de aceite, filtros, frenos y revisión completa de los 40 puntos críticos. Alargamos la vida útil de tu motor con mantenimiento preventivo experto.", ca: "Canvis d'oli, filtres, frens i revisió completa dels 40 punts crítics. Allarguem la vida útil del teu motor amb manteniment preventiu expert." },
   "card-mant-link": { es: 'Reservar revisión <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>', ca: 'Reservar revisió <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>' },
 
   "card-pneu-title": { es: "Conexión total con el asfalto.", ca: "Connexió total amb l'asfalt." },
@@ -50,23 +50,36 @@ const dictionary = {
   "card-mec-text": { es: "Desde distribuciones hasta embragues. Si hace ruido o no funciona como el primer día, lo desmontamos, lo entendemos y lo solucionamos.", ca: "Des de distribucions fins a embragatges. Si fa soroll o no funciona com el primer dia, ho desmuntem, ho entenem i ho solucionem." },
   "card-mec-link": { es: 'Explicar el problema <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>', ca: 'Explicar el problema <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>' },
 
-  // About
-  "about-badge": { es: "Años de tradición", ca: "Anys de tradició" },
-  "about-label": { es: "Nuestra historia", ca: "La nostra història" },
-  "about-title": { es: "3 Generaciones.<br>El mismo apellido.<br>La misma pasión.", ca: "3 Generacions.<br>El mateix cognom.<br>La mateixa passió." },
-  "about-quote": { es: "\"En el año 1978, el Abuelo Sin abrió por primera vez la persiana de este taller en el corazón de Lleida. Trabajaba de oído, con las manos manchadas de grasa y una llave inglesa como mejor aliada.\"", ca: "\"L'any 1978, l'Avi Sin va obrir per primera vegada la persiana d'aquest taller al cor de Lleida. Treballava d'oïda, amb les mans tacades de greix i una clau anglesa com a millor aliada.\"" },
-  
-  "hist-y1-title": { es: "El Abuelo Sin — Los Orígenes", ca: "L'Avi Sin — Els Orígens" },
-  "hist-y1-text": { es: "Una persiana, dos manos y una pasión por la mecánica. El taller abría sus puertas en la Calle del Centro de Lleida con herramientas analógicas y un compromiso absoluto con el vecindario.", ca: "Una persiana, dues mans i una passió per la mecànica. El taller obria les portes al Carrer del Centre de Lleida amb eines analògiques i un compromís absolut amb el veïnat." },
-  "hist-y2-title": { es: "El Hijo — La Era Electrónica", ca: "El Fill — L'Era Electrónica" },
-  "hist-y2-text": { es: "La llegada de la inyección electrónica y los nuevos motores. El hijo tomaba el relevo adaptando el taller a las tecnologías emergentes sin perder el alma de familia.", ca: "L'arribada de la injecció electrònica i els nous motors. El fill agafava el relleu adaptant el taller a les tecnologies emergents sense perdre l'ànima de família." },
-  "hist-y3-year": { es: "Hoy", ca: "Avui" },
-  "hist-y3-title": { es: "La 3ª Generación — MOTOR SIN", ca: "La 3a Generació — MOTOR SIN" },
-  "hist-y3-text": { es: "Seguimos en la misma calle, saludando a los mismos vecinos, pero hemos cambiado la llave inglesa por los ordenadores de diagnóstico más avanzados del mercado. La herramienta ha evolucionado; la honestidad y el orgullo por el trabajo bien hecho, no.", ca: "Seguim al mateix carrer, saludant als mateixos veïns, però hem canviat la clau anglesa pels ordinadors de diagnòstic més avançats del mercat. L'eina ha evolucionat; l'honestedat i l'orgull per la feina ben feta, no." },
-  
-  "stat-1": { es: "Años de experiencia", ca: "Anys d'experiència" },
-  "stat-2": { es: "Generaciones", ca: "Generacions" },
-  "stat-3": { es: "Vehículos revisados/año", ca: "Vehicles revisats/any" },
+  // El Taller
+  "about-badge": { es: "Valoración en Google", ca: "Valoració a Google" },
+  "about-badge-aria": { es: "4,9 sobre 5 en Google. Ver opiniones", ca: "4,9 sobre 5 a Google. Veure opinions" },
+  "about-label": { es: "El taller", ca: "El taller" },
+  "about-title": { es: "Así trabajamos.<br>Claro, de principio a fin.", ca: "Així treballem.<br>Clar, de principi a fi." },
+  "about-intro": {
+    es: "Somos un taller de barrio en la Bordeta especializado en mecánica y electrónica del automóvil. Trabajamos con todo tipo de vehículos y con equipos de diagnosis de última generación, pero lo más importante es cómo te tratamos: sabrás en todo momento qué le pasa a tu coche.",
+    ca: "Som un taller de barri a la Bordeta especialitzat en mecànica i electrònica de l'automòbil. Treballem amb tot tipus de vehicles i amb equips de diagnosi d'última generació, però el més important és com et tractem: sabràs en tot moment què li passa al teu cotxe."
+  },
+
+  "step-1-title": { es: "Nos escribes y concertamos visita", ca: "Ens escrius i concertem visita" },
+  "step-1-text": { es: "Por WhatsApp, cuando te vaya bien. Nos cuentas qué le pasa al coche y te damos día y hora.", ca: "Per WhatsApp, quan et vagi bé. Ens expliques què li passa al cotxe i et donem dia i hora." },
+  "step-2-title": { es: "Hacemos el diagnóstico", ca: "Fem el diagnòstic" },
+  "step-2-text": { es: "Revisamos el vehículo con equipos de diagnosis electrónica para encontrar el origen real de la avería, no solo el síntoma.", ca: "Revisem el vehicle amb equips de diagnosi electrònica per trobar l'origen real de l'avaria, no només el símptoma." },
+  "step-3-title": { es: "Te informamos antes de reparar", ca: "T'informem abans de reparar" },
+  "step-3-text": { es: "Si la reparación es importante o grave, te damos presupuesto antes de tocar nada. Y si durante el trabajo aparece algún imprevisto, te llamamos antes de continuar.", ca: "Si la reparació és important o greu, et donem pressupost abans de tocar res. I si durant la feina apareix algun imprevist, et truquem abans de continuar." },
+  "step-4-title": { es: "Reparamos con garantía", ca: "Reparem amb garantia" },
+  "step-4-text": { es: "Todos nuestros trabajos tienen garantía. Cuando recoges el coche, te explicamos qué hemos hecho y por qué.", ca: "Tots els nostres treballs tenen garantia. Quan reculls el cotxe, t'expliquem què hem fet i per què." },
+
+  // Opinions (Google)
+  "reviews-label": { es: "Opiniones", ca: "Opinions" },
+  "reviews-title": { es: "Lo que dicen<br>nuestros clientes.", ca: "El que diuen<br>els nostres clients." },
+  "reviews-of5": { es: "sobre 5", ca: "sobre 5" },
+  "reviews-count": { es: "reseñas en Google", ca: "ressenyes a Google" },
+  "reviews-text": {
+    es: "¿Ya has pasado por el taller? Tu opinión nos ayuda a mejorar y ayuda a otros conductores de Lleida a encontrar un mecánico de confianza. Solo te llevará un minuto.",
+    ca: "Ja has passat pel taller? La teva opinió ens ajuda a millorar i ajuda altres conductors de Lleida a trobar un mecànic de confiança. Només et costarà un minut."
+  },
+  "reviews-write": { es: "Escribe tu reseña", ca: "Escriu la teva ressenya" },
+  "reviews-read": { es: "Leer las reseñas", ca: "Llegir les ressenyes" },
 
   // Contact
   "contact-label": { es: "Habla con nosotros", ca: "Parla amb nosaltres" },
@@ -133,6 +146,11 @@ const dictionary = {
     ca: "https://wa.me/34629934124?text=Hola!%20S%C3%B3c%20a%20la%20web%20de%20MOTOR%20SIN%20i%20voldria%20reservar%20una%20cita%20o%20fer%20una%20consulta.%20Em%20podeu%20ajudar%3F"
   },
   
+  // Mapa
+  "map-load": { es: "Mostrar mapa", ca: "Mostrar mapa" },
+  "map-open": { es: "Abrir en Google Maps", ca: "Obrir a Google Maps" },
+  "map-note": { es: "Al mostrar el mapa, Google puede instalar sus propias cookies.", ca: "En mostrar el mapa, Google pot instal·lar les seves pròpies cookies." },
+
   // Misc
   "scroll-top": { es: "Volver arriba", ca: "Tornar a dalt" },
   "video-mobile-badge": { es: "REPRODUCIR", ca: "REPRODUIR" },

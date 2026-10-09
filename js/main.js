@@ -9,7 +9,7 @@
  * 6. Magnetic buttons
  * 7. Form handler
  * 8. Scroll to top
- * 9. Counting stats
+ * 9. Google Maps (càrrega sota demanda)
  * 10. 3D Services Cards
  */
 
@@ -198,7 +198,11 @@ function initHeroVideo() {
   if (!video) return;
 
   const loadVideo = () => {
-    const src = video.getAttribute('data-src');
+    // WebM (VP9) si el navegador el suporta; si no (iPhone/iPad antics), MP4 H.264
+    const webm = video.getAttribute('data-src');
+    const mp4  = video.getAttribute('data-src-mp4');
+    const canWebm = webm && video.canPlayType('video/webm; codecs="vp9"') !== '';
+    const src = canWebm ? webm : (mp4 || webm);
     if (!src) return;
     video.src = src;
     video.load();
@@ -208,6 +212,8 @@ function initHeroVideo() {
       if (skeleton) skeleton.classList.add('hidden');
     }, { once: true });
     video.addEventListener('error', () => {
+      // Si el vídeo no es pot reproduir, deixem visible el poster
+      video.classList.add('loaded');
       if (skeleton) skeleton.classList.add('hidden');
     }, { once: true });
 
@@ -499,33 +505,28 @@ function initScrollTop() {
 }
 
 /* ==========================================
-   9. COUNTING STATS ANIMATION
+   9. GOOGLE MAPS (càrrega sota demanda)
+   L'iframe no es carrega fins que l'usuari ho demana,
+   així Google no instal·la cookies sense consentiment.
    ========================================== */
-function initCountingStats() {
-  const stats = document.querySelectorAll('.stat-item__number[data-target]');
-  if (!stats.length) return;
+function initMapFacade() {
+  const btn = document.getElementById('map-load-btn');
+  const section = document.getElementById('mapa');
+  if (!btn || !section) return;
 
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el       = entry.target;
-      const target   = parseInt(el.getAttribute('data-target'));
-      const prefix   = el.getAttribute('data-prefix') || '';
-      const suffix   = el.getAttribute('data-suffix') || '';
-      const duration = 1500;
-      const start    = performance.now();
-      const update   = now => {
-        const p = Math.min((now - start) / duration, 1);
-        const currentNum = Math.round((1 - Math.pow(1 - p, 3)) * target);
-        el.textContent = prefix + currentNum + suffix;
-        if (p < 1) requestAnimationFrame(update);
-      };
-      requestAnimationFrame(update);
-      obs.unobserve(el);
-    });
-  }, { threshold: 0.5 });
-
-  stats.forEach(el => obs.observe(el));
+  btn.addEventListener('click', () => {
+    const lang = localStorage.getItem('lang') || 'es';
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://maps.google.com/maps?q=Carrer+del+Centre+18%2C+25001+Lleida&hl=${lang}&z=16&output=embed`;
+    iframe.width = '100%';
+    iframe.height = '420';
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    iframe.title = lang === 'ca'
+      ? 'Ubicació de MOTOR SIN — Carrer del Centre 18, Lleida'
+      : 'Ubicación de MOTOR SIN — Carrer del Centre 18, Lleida';
+    section.querySelector('.map-facade').replaceWith(iframe);
+  });
 }
 
 /* ==========================================
@@ -670,6 +671,7 @@ function openLegalModal(type) {
  
           <h3>5. Destinatarios</h3>
           <p>No se cederán datos a terceros, salvo obligación legal o que sea estrictamente necesario para la prestación del servicio (ej. proveedores de software de gestión de taller).</p>
+          <p>Los mensajes enviados mediante el formulario de contacto se transmiten a través de FormSubmit (formsubmit.co), proveedor que actúa como encargado del tratamiento con el único fin de hacer llegar el mensaje al correo del taller. Este proveedor puede tratar los datos fuera del Espacio Económico Europeo.</p>
  
           <h3>6. Derechos</h3>
           <p>El usuario tiene derecho a acceder, rectificar y suprimir los datos, así como otros derechos (limitación y oposición), enviando un correo a sinysole@msn.com, adjuntando copia del DNI para su identificación. También tiene derecho a presentar una reclamación ante la Autoridad de Control competente (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tratamiento no se ajusta a la normativa.</p>
@@ -700,6 +702,7 @@ function openLegalModal(type) {
  
           <h3>5. Destinataris</h3>
           <p>No se cediran dades a tercers, excepte obligació legal o que sigui estrictament necessari per a la prestació del servei (ex: proveïdors de programari de gestió de taller).</p>
+          <p>Els missatges enviats mitjançant el formulari de contacte es transmeten a través de FormSubmit (formsubmit.co), proveïdor que actua com a encarregat del tractament amb l'única finalitat de fer arribar el missatge al correu del taller. Aquest proveïdor pot tractar les dades fora de l'Espai Econòmic Europeu.</p>
  
           <h3>6. Drets</h3>
           <p>L'usuari té dret a accedir, rectificar i suprimir les dades, així com altres drets (limitació i oposició), enviant un correu a sinysole@msn.com, adjuntant còpia del DNI per a la seva identificació. També té dret a presentar una reclamació davant l'Autoritat de Control competent (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tractament no s'ajusta a la normativa.</p>
@@ -716,7 +719,7 @@ function openLegalModal(type) {
           <strong>NIF/CIF:</strong> B25304437<br>
           <strong>Domicilio:</strong> C. Centro, nº 18 (25001 Lleida).<br>
           <strong>Correo electrónico:</strong> sinysole@msn.com<br>
-          <strong>Teléfono:</strong> 973 21 11 89 / 629 93 41 24<br>
+          <strong>Teléfono:</strong> 629 93 41 24<br>
           <strong>Datos de registro:</strong> Inscrita en el Registro Mercantil de Lleida.</p>
  
           <h3>2. Propiedad Intelectual</h3>
@@ -735,7 +738,7 @@ function openLegalModal(type) {
           <strong>NIF/CIF:</strong> B25304437<br>
           <strong>Domicili:</strong> C. Centre, núm. 18 (25001 Lleida).<br>
           <strong>Correu electrònic:</strong> sinysole@msn.com<br>
-          <strong>Telèfon:</strong> 973 21 11 89 / 629 93 41 24<br>
+          <strong>Telèfon:</strong> 629 93 41 24<br>
           <strong>Dades de registre:</strong> Inscrita al Registre Mercantil de Lleida.</p>
  
           <h3>2. Propietat Intel·lectual</h3>
@@ -750,17 +753,17 @@ function openLegalModal(type) {
       es: {
         title: "Política de Cookies",
         content: `
-          <p>Este sitio web utiliza únicamente cookies técnicas y de personalización propias, que son aquellas que permiten al usuario la navegación a través de la página web y la utilización de las diferentes opciones o servicios que en ella existen (como controlar el tráfico y la comunicación de datos).</p>
-          <p>Al no utilizar cookies de terceros ni cookies con fines publicitarios o de seguimiento (tracking), según el artículo 22.2 de la LSSI, no es necesario obtener el consentimiento ni mostrar un banner de advertencia complejo, aunque se informa de su existencia para la transparencia del usuario.</p>
-          <p>El usuario puede configurar su navegador para bloquear estas cookies, pero es posible que algunas funcionalidades de la web dejen de funcionar correctamente.</p>
+          <p>Este sitio web solo utiliza almacenamiento técnico propio: guarda en tu navegador el idioma que eliges (castellano o catalán) para mostrártelo en tu próxima visita. No utilizamos cookies publicitarias ni de análisis o seguimiento, por lo que, según el artículo 22.2 de la LSSI, no es necesario solicitar tu consentimiento.</p>
+          <p><strong>Mapa de Google:</strong> el mapa de localización no se carga hasta que pulsas «Mostrar mapa». A partir de ese momento, Google puede instalar sus propias cookies, sujetas a la <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">política de cookies de Google</a>. Si prefieres no cargarlo, puedes usar el enlace «Abrir en Google Maps».</p>
+          <p>Puedes configurar tu navegador para bloquear o eliminar estos datos, aunque es posible que algunas funcionalidades de la web dejen de funcionar correctamente.</p>
         `
       },
       ca: {
         title: "Política de Cookies",
         content: `
-          <p>Aquest lloc web utilitza només cookies tècniques i de personalització pròpies, que són aquelles que permeten a l'usuari la navegació a través de la pàgina web i la utilització de les diferents opcions o serveis que en ella existeixen (com controlar el trànsit i la comunicació de dades).</p>
-          <p>En no utilitzar cookies de tercers ni cookies amb finalitats publicitàries o de seguiment (tracking), segons l'article 22.2 de la LSSI, no és necessari obtenir el consentiment ni mostrar un bàner d'advertència complex, tot i que s'informa de la seva existència per a la transparència de l'usuari.</p>
-          <p>L'usuari pot configurar el seu navegador per bloquejar aquestes cookies, però és possible que algunes funcionalitats de la web deixin de funcionar correctament.</p>
+          <p>Aquest lloc web només utilitza emmagatzematge tècnic propi: desa al teu navegador l'idioma que tries (castellà o català) per mostrar-te'l a la propera visita. No utilitzem cookies publicitàries ni d'anàlisi o seguiment, de manera que, segons l'article 22.2 de la LSSI, no cal demanar el teu consentiment.</p>
+          <p><strong>Mapa de Google:</strong> el mapa de localització no es carrega fins que prems «Mostrar mapa». A partir d'aquell moment, Google pot instal·lar les seves pròpies cookies, subjectes a la <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">política de cookies de Google</a>. Si prefereixes no carregar-lo, pots fer servir l'enllaç «Obrir a Google Maps».</p>
+          <p>Pots configurar el teu navegador per bloquejar o eliminar aquestes dades, tot i que és possible que algunes funcionalitats del web deixin de funcionar correctament.</p>
         `
       }
     }
@@ -801,7 +804,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMagneticButtons();
   initFormHandler();
   initScrollTop();
-  initCountingStats();
+  initMapFacade();
   init3DCards();
   initWhatsAppAnimation();
 });
@@ -838,7 +841,8 @@ function initFormHandler() {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/oskar.rodrigo@gmail.com', {
+      // Mateix destinatari que l'atribut action del formulari, via l'endpoint AJAX de FormSubmit
+      const response = await fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
