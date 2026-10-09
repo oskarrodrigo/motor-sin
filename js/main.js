@@ -670,11 +670,18 @@ function openLegalModal(type) {
           <p>Los datos se conservarán durante el tiempo necesario para la prestación del servicio solicitado y, en todo caso, durante los plazos legales exigidos por la normativa fiscal y mercantil.</p>
  
           <h3>5. Destinatarios</h3>
-          <p>No se cederán datos a terceros, salvo obligación legal o que sea estrictamente necesario para la prestación del servicio (ej. proveedores de software de gestión de taller).</p>
-          <p>Los mensajes enviados mediante el formulario de contacto se transmiten a través de FormSubmit (formsubmit.co), proveedor que actúa como encargado del tratamiento con el único fin de hacer llegar el mensaje al correo del taller. Este proveedor puede tratar los datos fuera del Espacio Económico Europeo.</p>
- 
+          <p>No se cederán datos a terceros, salvo obligación legal. Para prestar el servicio contamos con los siguientes proveedores, que actúan como encargados del tratamiento:</p>
+          <ul>
+            <li><strong>Alojamiento web:</strong> Cloudflare, Inc. sirve esta web y trata datos técnicos de conexión (como la dirección IP) para mostrarla y protegerla frente a ataques. Cloudflare está adherida al Marco de Privacidad de Datos UE-EE. UU. y aplica cláusulas contractuales tipo de la Comisión Europea.</li>
+            <li><strong>Formulario de contacto:</strong> los mensajes se transmiten a través de FormSubmit (formsubmit.co) con el único fin de hacerlos llegar al correo del taller. Este proveedor puede tratar los datos fuera del Espacio Económico Europeo.</li>
+            <li><strong>Software de gestión del taller</strong>, cuando sea necesario para gestionar tu cita o reparación.</li>
+          </ul>
+          <p>Si nos escribes por WhatsApp, la conversación se realiza a través de WhatsApp Ireland Limited y queda sujeta también a sus propias condiciones y política de privacidad.</p>
+
           <h3>6. Derechos</h3>
-          <p>El usuario tiene derecho a acceder, rectificar y suprimir los datos, así como otros derechos (limitación y oposición), enviando un correo a sinysole@msn.com, adjuntando copia del DNI para su identificación. También tiene derecho a presentar una reclamación ante la Autoridad de Control competente (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tratamiento no se ajusta a la normativa.</p>
+          <p>Puedes ejercer en cualquier momento tus derechos de acceso, rectificación, supresión, limitación del tratamiento, oposición y portabilidad de tus datos escribiendo a sinysole@msn.com. Si tenemos dudas razonables sobre tu identidad, podremos pedirte información adicional para confirmarla.</p>
+          <p>Cuando el tratamiento se base en tu consentimiento, puedes retirarlo en cualquier momento, sin que ello afecte a la licitud del tratamiento realizado antes de retirarlo.</p>
+          <p>También tienes derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>) si consideras que el tratamiento no se ajusta a la normativa.</p>
         `
       },
       ca: {
@@ -701,11 +708,18 @@ function openLegalModal(type) {
           <p>Les dades es conservaran durant el temps necessari per a la prestació del servei sol·licitat i, en tot cas, durant els terminis legals exigits per la normativa fiscal i mercantil.</p>
  
           <h3>5. Destinataris</h3>
-          <p>No se cediran dades a tercers, excepte obligació legal o que sigui estrictament necessari per a la prestació del servei (ex: proveïdors de programari de gestió de taller).</p>
-          <p>Els missatges enviats mitjançant el formulari de contacte es transmeten a través de FormSubmit (formsubmit.co), proveïdor que actua com a encarregat del tractament amb l'única finalitat de fer arribar el missatge al correu del taller. Aquest proveïdor pot tractar les dades fora de l'Espai Econòmic Europeu.</p>
- 
+          <p>No se cediran dades a tercers, excepte per obligació legal. Per prestar el servei comptem amb els proveïdors següents, que actuen com a encarregats del tractament:</p>
+          <ul>
+            <li><strong>Allotjament web:</strong> Cloudflare, Inc. serveix aquest web i tracta dades tècniques de connexió (com l'adreça IP) per mostrar-lo i protegir-lo d'atacs. Cloudflare està adherida al Marc de Privacitat de Dades UE-EUA i aplica clàusules contractuals tipus de la Comissió Europea.</li>
+            <li><strong>Formulari de contacte:</strong> els missatges es transmeten a través de FormSubmit (formsubmit.co) amb l'única finalitat de fer-los arribar al correu del taller. Aquest proveïdor pot tractar les dades fora de l'Espai Econòmic Europeu.</li>
+            <li><strong>Programari de gestió del taller</strong>, quan sigui necessari per gestionar la teva cita o reparació.</li>
+          </ul>
+          <p>Si ens escrius per WhatsApp, la conversa es fa a través de WhatsApp Ireland Limited i queda subjecta també a les seves pròpies condicions i política de privacitat.</p>
+
           <h3>6. Drets</h3>
-          <p>L'usuari té dret a accedir, rectificar i suprimir les dades, així com altres drets (limitació i oposició), enviant un correu a sinysole@msn.com, adjuntant còpia del DNI per a la seva identificació. També té dret a presentar una reclamació davant l'Autoritat de Control competent (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>) si considera que el tractament no s'ajusta a la normativa.</p>
+          <p>Pots exercir en qualsevol moment els teus drets d'accés, rectificació, supressió, limitació del tractament, oposició i portabilitat de les teves dades escrivint a sinysole@msn.com. Si tenim dubtes raonables sobre la teva identitat, et podrem demanar informació addicional per confirmar-la.</p>
+          <p>Quan el tractament es basi en el teu consentiment, el pots retirar en qualsevol moment, sense que això afecti la licitud del tractament fet abans de retirar-lo.</p>
+          <p>També tens dret a presentar una reclamació davant l'Agència Espanyola de Protecció de Dades (<a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>) si consideres que el tractament no s'ajusta a la normativa.</p>
         `
       }
     },
@@ -753,16 +767,36 @@ function openLegalModal(type) {
       es: {
         title: "Política de Cookies",
         content: `
-          <p>Este sitio web solo utiliza almacenamiento técnico propio: guarda en tu navegador el idioma que eliges (castellano o catalán) para mostrártelo en tu próxima visita. No utilizamos cookies publicitarias ni de análisis o seguimiento, por lo que, según el artículo 22.2 de la LSSI, no es necesario solicitar tu consentimiento.</p>
-          <p><strong>Mapa de Google:</strong> el mapa de localización no se carga hasta que pulsas «Mostrar mapa». A partir de ese momento, Google puede instalar sus propias cookies, sujetas a la <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">política de cookies de Google</a>. Si prefieres no cargarlo, puedes usar el enlace «Abrir en Google Maps».</p>
+          <p>Este sitio web no utiliza cookies publicitarias ni de análisis o seguimiento. Solo utiliza los elementos técnicos que se indican a continuación, necesarios para su funcionamiento, por lo que, según el artículo 22.2 de la LSSI, no es necesario solicitar tu consentimiento para ellos.</p>
+          <div class="modal-table-wrap">
+            <table class="modal-table">
+              <thead><tr><th>Nombre</th><th>Titular</th><th>Finalidad</th><th>Duración</th></tr></thead>
+              <tbody>
+                <tr><td><code>lang</code> (almacenamiento local)</td><td>Propio</td><td>Recordar el idioma que eliges (castellano o catalán).</td><td>Hasta que lo borres desde tu navegador.</td></tr>
+                <tr><td><code>__cf_bm</code> y similares</td><td>Cloudflare</td><td>Cookies técnicas de seguridad que el proveedor de alojamiento puede instalar para proteger la web frente a bots y ataques.</td><td>Hasta 30 minutos.</td></tr>
+                <tr><td>Cookies de Google Maps</td><td>Google</td><td>Mostrar el mapa de localización. <strong>Solo se instalan si pulsas «Mostrar mapa».</strong></td><td>Según la <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">política de cookies de Google</a>.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>El mapa de localización no se carga hasta que pulsas «Mostrar mapa». Si prefieres no cargarlo, puedes usar el enlace «Abrir en Google Maps».</p>
           <p>Puedes configurar tu navegador para bloquear o eliminar estos datos, aunque es posible que algunas funcionalidades de la web dejen de funcionar correctamente.</p>
         `
       },
       ca: {
         title: "Política de Cookies",
         content: `
-          <p>Aquest lloc web només utilitza emmagatzematge tècnic propi: desa al teu navegador l'idioma que tries (castellà o català) per mostrar-te'l a la propera visita. No utilitzem cookies publicitàries ni d'anàlisi o seguiment, de manera que, segons l'article 22.2 de la LSSI, no cal demanar el teu consentiment.</p>
-          <p><strong>Mapa de Google:</strong> el mapa de localització no es carrega fins que prems «Mostrar mapa». A partir d'aquell moment, Google pot instal·lar les seves pròpies cookies, subjectes a la <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">política de cookies de Google</a>. Si prefereixes no carregar-lo, pots fer servir l'enllaç «Obrir a Google Maps».</p>
+          <p>Aquest lloc web no utilitza cookies publicitàries ni d'anàlisi o seguiment. Només utilitza els elements tècnics que s'indiquen a continuació, necessaris per al seu funcionament, de manera que, segons l'article 22.2 de la LSSI, no cal demanar el teu consentiment per a aquests elements.</p>
+          <div class="modal-table-wrap">
+            <table class="modal-table">
+              <thead><tr><th>Nom</th><th>Titular</th><th>Finalitat</th><th>Durada</th></tr></thead>
+              <tbody>
+                <tr><td><code>lang</code> (emmagatzematge local)</td><td>Propi</td><td>Recordar l'idioma que tries (castellà o català).</td><td>Fins que l'esborris des del navegador.</td></tr>
+                <tr><td><code>__cf_bm</code> i similars</td><td>Cloudflare</td><td>Cookies tècniques de seguretat que el proveïdor d'allotjament pot instal·lar per protegir el web de bots i atacs.</td><td>Fins a 30 minuts.</td></tr>
+                <tr><td>Cookies de Google Maps</td><td>Google</td><td>Mostrar el mapa de localització. <strong>Només s'instal·len si prems «Mostrar mapa».</strong></td><td>Segons la <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">política de cookies de Google</a>.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>El mapa de localització no es carrega fins que prems «Mostrar mapa». Si prefereixes no carregar-lo, pots fer servir l'enllaç «Obrir a Google Maps».</p>
           <p>Pots configurar el teu navegador per bloquejar o eliminar aquestes dades, tot i que és possible que algunes funcionalitats del web deixin de funcionar correctament.</p>
         `
       }

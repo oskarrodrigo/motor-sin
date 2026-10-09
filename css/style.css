@@ -1484,6 +1484,57 @@ section {
   margin-bottom: 1rem;
 }
 
+.modal-body-text ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.modal-body-text li {
+  margin-bottom: 0.4rem;
+}
+
+.modal-body-text a {
+  color: var(--color-red);
+  text-decoration: underline;
+}
+
+/* Taula de cookies */
+.modal-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.modal-table {
+  width: 100%;
+  min-width: 440px;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.modal-table th,
+.modal-table td {
+  padding: 0.6rem 0.7rem;
+  border-bottom: 1px solid var(--color-grey-200);
+  text-align: left;
+  vertical-align: top;
+}
+
+.modal-table th {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-anthracite);
+  background: var(--color-grey-100);
+}
+
+.modal-table code {
+  font-size: 0.8rem;
+  background: var(--color-grey-100);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
+
 /* =========================================
    WHATSAPP FLOATING BUTTON (CAR ANIMATION)
    ========================================= */
