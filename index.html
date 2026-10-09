@@ -187,8 +187,6 @@
     <div class="hero__right">
       <div class="hero__video-wrapper">
         <div class="hero__video-skeleton" aria-hidden="true"></div>
-        <!-- Avís de contingut generat amb IA (Reglament UE 2024/1689, art. 50) -->
-        <span class="ai-label ai-label--video" data-i18n="ai-label-video">Vídeo generado con IA</span>
         <video id="hero-video" class="hero__video"
                data-src="public/videos/hero.webm"
                data-src-mp4="public/videos/hero.mp4"
@@ -197,6 +195,8 @@
                style="cursor: none;"
                aria-label="Vídeo de mecànics treballant en un motor"></video>
       </div>
+      <!-- Avís de contingut generat amb IA (Reglament UE 2024/1689, art. 50) -->
+      <p class="ai-caption ai-caption--video" data-i18n="ai-label-video">Vídeo generado con IA</p>
     </div>
   </section>
 
@@ -380,12 +380,12 @@
     <div class="about__inner">
 
       <div class="about__visual reveal">
-        <span class="ai-label ai-label--slider" data-i18n="ai-label-photos">Fotos del taller editadas con IA</span>
         <div class="about-slider">
           <img src="public/images/taller2.webp" alt="Mecánico de MOTOR SIN trabajando en el motor de un vehículo en el taller" class="about-slider__img" style="animation-delay: 0s;" loading="lazy" width="1696" height="2528">
           <img src="public/images/taller3.webp" alt="Vehículo en el elevador de tijera del taller MOTOR SIN, en la Bordeta (Lleida)" class="about-slider__img" style="animation-delay: 4s;" loading="lazy" width="1696" height="2528">
           <img src="public/images/taller4.webp" alt="Diagnosis electrónica de un vehículo elevado en el taller MOTOR SIN" class="about-slider__img" style="animation-delay: 8s;" loading="lazy" width="1696" height="2528">
         </div>
+        <p class="ai-caption" data-i18n="ai-label-photos">Fotos del taller editadas con IA</p>
         <!-- Valoració de Google: actualitzar aquí i a la secció #opiniones -->
         <a href="#opiniones" class="about__rating-badge" data-i18n-title="about-badge-aria" aria-label="4,9 sobre 5 en Google. Ver opiniones">
           <span class="about__rating-badge-label" data-i18n="about-badge">Valoración en Google</span>
