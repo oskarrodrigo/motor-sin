@@ -117,6 +117,7 @@ const dictionary = {
 
   // Avisos de contingut generat amb IA
   "ai-label-video": { es: "Vídeo generado con IA", ca: "Vídeo generat amb IA" },
+  "ai-label-illustrations": { es: "Ilustraciones generadas con IA", ca: "Il·lustracions generades amb IA" },
   "ai-label-photos": { es: "Fotos del taller editadas con IA", ca: "Fotos del taller editades amb IA" },
 
   // WhatsApp Float
