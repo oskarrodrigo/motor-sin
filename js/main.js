@@ -7,7 +7,6 @@
  * 4. Scroll reveal
  * 5. Hero entry animation
  * 6. Magnetic buttons
- * 7. Form handler
  * 8. Scroll to top
  * 9. Google Maps (càrrega sota demanda)
  * 10. 3D Services Cards
@@ -460,7 +459,7 @@ function initHeroScramble() {
 function initMagneticButtons() {
   if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) return;
 
-  document.querySelectorAll('.btn-magnetic, .form-submit, .nav__cta').forEach(el => {
+  document.querySelectorAll('.btn-magnetic, .nav__cta').forEach(el => {
     el.addEventListener('mousemove', e => {
       const rect = el.getBoundingClientRect();
       const x = (e.clientX - rect.left - rect.width  / 2) * 0.3;
@@ -474,10 +473,6 @@ function initMagneticButtons() {
     });
   });
 }
-
-/* ==========================================
-   7. (REMOVED) FORM SUBMISSION HANDLER
-   ========================================== */
 
 /* ==========================================
    8. SCROLL TO TOP
@@ -656,15 +651,15 @@ function openLegalModal(type) {
           <strong>Email:</strong> sinysole@msn.com</p>
  
           <h3>2. Finalidad del Tratamiento</h3>
-          <p>Los datos personales facilitados (nombre, teléfono, email, matrícula) serán tratados para:</p>
+          <p>Esta web no recoge datos personales mediante formularios. Los datos que nos facilites por WhatsApp o en el propio taller (nombre, teléfono, matrícula y datos del vehículo) se tratarán para:</p>
           <ul>
-            <li>Gestionar la solicitud de cita previa en el taller.</li>
-            <li>Enviar presupuestos e información sobre el estado de la reparación del vehículo.</li>
-            <li>Responder a consultas realizadas a través del formulario de contacto o WhatsApp.</li>
+            <li>Gestionar tu cita en el taller.</li>
+            <li>Enviarte presupuestos e información sobre el estado de la reparación de tu vehículo.</li>
+            <li>Responder a tus consultas.</li>
           </ul>
  
           <h3>3. Legitimación</h3>
-          <p>El tratamiento de sus datos se basa en el consentimiento explícito del interesado al marcar la casilla de aceptación del formulario y, posteriormente, en la ejecución de una relación precontractual o contractual de servicios mecánicos.</p>
+          <p>El tratamiento se basa en la aplicación de medidas precontractuales a petición tuya (cuando nos consultas o pides cita), en la ejecución del contrato de reparación y en el cumplimiento de las obligaciones legales que nos sean aplicables, como las fiscales.</p>
  
           <h3>4. Conservación de los datos</h3>
           <p>Los datos se conservarán durante el tiempo necesario para la prestación del servicio solicitado y, en todo caso, durante los plazos legales exigidos por la normativa fiscal y mercantil.</p>
@@ -673,14 +668,12 @@ function openLegalModal(type) {
           <p>No se cederán datos a terceros, salvo obligación legal. Para prestar el servicio contamos con los siguientes proveedores, que actúan como encargados del tratamiento:</p>
           <ul>
             <li><strong>Alojamiento web:</strong> Cloudflare, Inc. sirve esta web y trata datos técnicos de conexión (como la dirección IP) para mostrarla y protegerla frente a ataques. Cloudflare está adherida al Marco de Privacidad de Datos UE-EE. UU. y aplica cláusulas contractuales tipo de la Comisión Europea.</li>
-            <li><strong>Formulario de contacto:</strong> los mensajes se transmiten a través de FormSubmit (formsubmit.co) con el único fin de hacerlos llegar al correo del taller. Este proveedor puede tratar los datos fuera del Espacio Económico Europeo.</li>
             <li><strong>Software de gestión del taller</strong>, cuando sea necesario para gestionar tu cita o reparación.</li>
           </ul>
           <p>Si nos escribes por WhatsApp, la conversación se realiza a través de WhatsApp Ireland Limited y queda sujeta también a sus propias condiciones y política de privacidad.</p>
 
           <h3>6. Derechos</h3>
           <p>Puedes ejercer en cualquier momento tus derechos de acceso, rectificación, supresión, limitación del tratamiento, oposición y portabilidad de tus datos escribiendo a sinysole@msn.com. Si tenemos dudas razonables sobre tu identidad, podremos pedirte información adicional para confirmarla.</p>
-          <p>Cuando el tratamiento se base en tu consentimiento, puedes retirarlo en cualquier momento, sin que ello afecte a la licitud del tratamiento realizado antes de retirarlo.</p>
           <p>También tienes derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>) si consideras que el tratamiento no se ajusta a la normativa.</p>
         `
       },
@@ -694,15 +687,15 @@ function openLegalModal(type) {
           <strong>Email:</strong> sinysole@msn.com</p>
  
           <h3>2. Finalitat del Tractament</h3>
-          <p>Les dades personals facilitades (nom, telèfon, email, matrícula) seran tractades per a:</p>
+          <p>Aquest web no recull dades personals mitjançant formularis. Les dades que ens facilitis per WhatsApp o al mateix taller (nom, telèfon, matrícula i dades del vehicle) es tractaran per a:</p>
           <ul>
-            <li>Gestionar la sol·licitud de cita prèvia al taller.</li>
-            <li>Enviar pressupostos i informació sobre l'estat de la reparació del vehicle.</li>
-            <li>Respondre a consultes realitzades a través del formulari de contacte o WhatsApp.</li>
+            <li>Gestionar la teva cita al taller.</li>
+            <li>Enviar-te pressupostos i informació sobre l'estat de la reparació del teu vehicle.</li>
+            <li>Respondre les teves consultes.</li>
           </ul>
  
           <h3>3. Legitimació</h3>
-          <p>El tractament de les seves dades es basa en el consentiment explícit de l'interessat en marcar la casella d'acceptació del formulari i, posteriorment, en l'execució d'una relació precontractual o contractual de serveis mecànics.</p>
+          <p>El tractament es basa en l'aplicació de mesures precontractuals a petició teva (quan ens consultes o demanes cita), en l'execució del contracte de reparació i en el compliment de les obligacions legals que ens siguin aplicables, com les fiscals.</p>
  
           <h3>4. Conservació de les dades</h3>
           <p>Les dades es conservaran durant el temps necessari per a la prestació del servei sol·licitat i, en tot cas, durant els terminis legals exigits per la normativa fiscal i mercantil.</p>
@@ -711,14 +704,12 @@ function openLegalModal(type) {
           <p>No se cediran dades a tercers, excepte per obligació legal. Per prestar el servei comptem amb els proveïdors següents, que actuen com a encarregats del tractament:</p>
           <ul>
             <li><strong>Allotjament web:</strong> Cloudflare, Inc. serveix aquest web i tracta dades tècniques de connexió (com l'adreça IP) per mostrar-lo i protegir-lo d'atacs. Cloudflare està adherida al Marc de Privacitat de Dades UE-EUA i aplica clàusules contractuals tipus de la Comissió Europea.</li>
-            <li><strong>Formulari de contacte:</strong> els missatges es transmeten a través de FormSubmit (formsubmit.co) amb l'única finalitat de fer-los arribar al correu del taller. Aquest proveïdor pot tractar les dades fora de l'Espai Econòmic Europeu.</li>
             <li><strong>Programari de gestió del taller</strong>, quan sigui necessari per gestionar la teva cita o reparació.</li>
           </ul>
           <p>Si ens escrius per WhatsApp, la conversa es fa a través de WhatsApp Ireland Limited i queda subjecta també a les seves pròpies condicions i política de privacitat.</p>
 
           <h3>6. Drets</h3>
           <p>Pots exercir en qualsevol moment els teus drets d'accés, rectificació, supressió, limitació del tractament, oposició i portabilitat de les teves dades escrivint a sinysole@msn.com. Si tenim dubtes raonables sobre la teva identitat, et podrem demanar informació addicional per confirmar-la.</p>
-          <p>Quan el tractament es basi en el teu consentiment, el pots retirar en qualsevol moment, sense que això afecti la licitud del tractament fet abans de retirar-lo.</p>
           <p>També tens dret a presentar una reclamació davant l'Agència Espanyola de Protecció de Dades (<a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>) si consideres que el tractament no s'ajusta a la normativa.</p>
         `
       }
@@ -836,78 +827,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroScramble();
   initScrollReveal();
   initMagneticButtons();
-  initFormHandler();
   initScrollTop();
   initMapFacade();
   init3DCards();
   initWhatsAppAnimation();
 });
-
-/* ==========================================
-   7. FORM HANDLER (AJAX — sense redireccions FormSubmit)
-   ========================================== */
-function initFormHandler() {
-  const form = document.getElementById('contact-form');
-  if (!form) return;
-
-  const successEl = form.querySelector('.form-success');
-  const submitBtn = form.querySelector('#form-submit-btn');
-
-  // Elements que amagarem quan l'enviament tingui exit
-  const hideOnSuccess = [
-    form.querySelector('.form-title-wrap'),
-    form.querySelector('.form-grid'),
-    form.querySelector('.form-checkbox'),
-    submitBtn,
-    form.querySelector('.form-legal-footer')
-  ];
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    // Estat de carrega al boto
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.style.opacity = '0.6';
-      submitBtn.style.cursor = 'wait';
-    }
-
-    const formData = new FormData(form);
-
-    try {
-      // Mateix destinatari que l'atribut action del formulari, via l'endpoint AJAX de FormSubmit
-      const response = await fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        // Amaga els camps del formulari
-        hideOnSuccess.forEach(el => {
-          if (el) el.style.display = 'none';
-        });
-        // Mostra el missatge d'exit personalitzat
-        if (successEl) successEl.classList.add('active');
-        form.reset();
-      } else {
-        throw new Error('Error en la resposta del servidor');
-      }
-    } catch (err) {
-      // Restaura el boto si hi ha error
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.style.opacity = '1';
-        submitBtn.style.cursor = '';
-      }
-      const lang = localStorage.getItem('lang') || 'es';
-      const msg = lang === 'ca'
-        ? 'Hi ha hagut un error. Torna-ho a intentar o contacta\'ns per WhatsApp.'
-        : 'Ha habido un error. Inténtalo de nuevo o contacta con nosotros por WhatsApp.';
-      alert(msg);
-    }
-  });
-}
 
 
 function init3DCards() {

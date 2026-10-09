@@ -168,7 +168,7 @@ ul, ol { list-style: none; }
 .nav__link:hover::after { width: 100%; }
 
 /* Universal Primary Button (Neon 3D) */
-.nav__cta, .btn-magnetic, .form-submit {
+.nav__cta, .btn-magnetic {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -196,41 +196,35 @@ ul, ol { list-style: none; }
   text-transform: uppercase;
   white-space: nowrap;
 }
-.form-submit {
-  width: 100%;
-  margin-top: var(--space-md);
-  font-size: 1rem;
-  padding: 1.1rem 2rem;
-}
 .btn-magnetic {
   width: fit-content;
 }
 
 /* Neon Glow & 3D Lift on Hover */
-.nav__cta:hover, .btn-magnetic:hover, .form-submit:hover {
+.nav__cta:hover, .btn-magnetic:hover {
   transform: translateY(-4px);
   background: var(--color-red-light);
   box-shadow: 0 12px 28px rgba(192, 0, 26, 0.55), 0 0 18px rgba(255, 26, 51, 0.40);
   color: #ffffff;
 }
 
-.nav__cta:hover svg, .btn-magnetic:hover svg, .form-submit:hover svg {
+.nav__cta:hover svg, .btn-magnetic:hover svg {
   transform: translateX(4px);
 }
 
-.nav__cta svg, .btn-magnetic svg, .form-submit svg {
+.nav__cta svg, .btn-magnetic svg {
   width: 20px;
   height: 20px;
   transition: transform var(--transition-fast);
 }
 
-.nav__cta:active, .btn-magnetic:active, .form-submit:active {
+.nav__cta:active, .btn-magnetic:active {
   transform: translateY(0);
   box-shadow: 0 4px 10px rgba(192, 0, 26, 0.35);
 }
 
 /* Internal sweeping light effect */
-.nav__cta::after, .btn-magnetic::after, .form-submit::after {
+.nav__cta::after, .btn-magnetic::after {
   content: '';
   position: absolute;
   top: 0; left: -100%;
@@ -241,7 +235,7 @@ ul, ol { list-style: none; }
   transition: left 0.7s ease;
 }
 
-.nav__cta:hover::after, .btn-magnetic:hover::after, .form-submit:hover::after {
+.nav__cta:hover::after, .btn-magnetic:hover::after {
   left: 200%;
 }
 
@@ -1129,24 +1123,73 @@ section {
 }
 
 .contact__inner {
-  max-width: 1200px;
+  position: relative;
+  max-width: 760px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: var(--space-3xl);
-  align-items: start;
+  text-align: center;
 }
 
-.contact .section-label { color: var(--color-red-light); }
+.contact .section-label { color: var(--color-red-light); justify-content: center; }
 .contact .section-label::before { background: var(--color-red-light); }
 
 .contact .section-title { color: var(--color-white); }
 
+.contact__lead {
+  max-width: 60ch;
+  margin: 1.2rem auto 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.7);
+}
+
+/* "Sempre contestem, però sense presses" */
+.contact__note {
+  max-width: 620px;
+  margin: 2rem auto 0;
+  padding: 1.4rem 1.8rem;
+  border: 1px solid rgba(37, 211, 102, 0.28);
+  border-radius: var(--radius-md);
+  background: rgba(37, 211, 102, 0.06);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.75);
+}
+
+.contact__note-title {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-white);
+}
+
+.contact__cta {
+  margin: 2.4rem auto 0;
+  font-size: 1.05rem;
+  padding: 1.15rem 2.2rem;
+}
+
+/* Botó principal de WhatsApp (verd de marca WhatsApp) */
+.btn-whatsapp { background: #25D366; }
+.nowrap { white-space: nowrap; }
+.btn-whatsapp:hover {
+  background: #1EBE5D;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45), 0 0 18px rgba(37, 211, 102, 0.35);
+}
+.btn-whatsapp:active { box-shadow: 0 4px 10px rgba(37, 211, 102, 0.35); }
+
 .contact__info {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  margin-top: var(--space-lg);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md) var(--space-2xl);
+  margin-top: var(--space-xl);
+  text-align: left;
+}
+
+.contact-info-item strong {
+  color: var(--color-white);
+  font-family: var(--font-heading);
 }
 
 .contact-info-item {
@@ -1188,111 +1231,6 @@ section {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
-/* Form */
-.contact__form {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: var(--radius-lg);
-  padding: 2.5rem;
-  backdrop-filter: blur(10px);
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
-}
-
-.form-group {
-  position: relative;
-}
-
-.form-group.full-width {
-  grid-column: 1 / -1;
-}
-
-.form-label {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 0.5rem;
-  transition: color var(--transition-fast);
-}
-
-.form-group:focus-within .form-label {
-  color: var(--color-red-light);
-}
-
-.form-input,
-.form-textarea {
-  width: 100%;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius-sm);
-  padding: 0.85rem 1.1rem;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  color: var(--color-white);
-  outline: none;
-  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.form-input::placeholder,
-.form-textarea::placeholder {
-  color: rgba(255,255,255,0.25);
-}
-
-.form-input:focus,
-.form-textarea:focus {
-  border-color: var(--color-red);
-  background: rgba(192, 0, 26, 0.06);
-  box-shadow: 0 0 0 3px rgba(192, 0, 26, 0.18);
-}
-
-.form-textarea {
-  min-height: 130px;
-  resize: vertical;
-  line-height: 1.6;
-}
-
-/* Animated focus bar */
-.form-input-bar {
-  position: absolute;
-  bottom: 0; left: 50%;
-  width: 0; height: 2px;
-  background: var(--color-red);
-  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-  transform: translateX(-50%);
-  transition: width var(--transition-med);
-}
-
-.form-group:focus-within .form-input-bar {
-  width: 100%;
-}
-
-/* Removed .form-submit specific styles to use Universal Primary Button */
-/* Success state */
-.form-success {
-  display: none;
-  text-align: center;
-  padding: 3rem var(--space-lg);
-  color: var(--color-white);
-  border: 1px solid rgba(37, 211, 102, 0.25);
-  border-radius: var(--radius-lg);
-  background: rgba(37, 211, 102, 0.05);
-  animation: successFadeIn 0.5s ease forwards;
-}
-
-@keyframes successFadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.form-success.active { display: block; }
 
 
 /* =========================================
@@ -1683,20 +1621,11 @@ section {
 /* Per a botons amb border-radius arrodonit */
 .nav__cta:focus-visible,
 .btn-magnetic:focus-visible,
-.form-submit:focus-visible,
 .whatsapp-float:focus-visible,
 .scroll-top:focus-visible,
 .modal__close:focus-visible {
   outline-offset: 4px;
   border-radius: var(--radius-xl);
-}
-
-/* Form inputs: substituir outline per box-shadow coherent */
-.form-input:focus-visible,
-.form-textarea:focus-visible {
-  outline: none;
-  border-color: var(--color-red);
-  box-shadow: 0 0 0 3px rgba(192, 0, 26, 0.25);
 }
 
 /* Amagar focus-visible en mòbils tàctils (no necessari) */
@@ -1897,11 +1826,6 @@ section {
     min-width: 0;
   }
 
-  .contact__inner {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
-  }
-
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
   .mobile-nav { display: flex; }
@@ -1970,14 +1894,6 @@ section {
     grid-template-columns: 1fr;
   }
 
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .form-group.full-width {
-    grid-column: auto;
-  }
-
   .hero__title {
     font-size: 2.2rem;
   }
@@ -2001,7 +1917,7 @@ section {
    cursor: none a tot element interactiu
    ========================================= */
 a, button, [role="button"], label,
-.btn-magnetic, .form-submit, .nav__cta,
+.btn-magnetic, .nav__cta,
 .service-card, .service-card__link,
 .whatsapp-float__btn, .scroll-top,
 .nav__link, .footer__link, .mobile-nav__link,
@@ -2010,7 +1926,7 @@ input, textarea, select {
 }
 @media (hover: none) and (pointer: coarse) {
   a, button, [role="button"], label,
-  .btn-magnetic, .form-submit, .nav__cta,
+  .btn-magnetic, .nav__cta,
   .service-card, .service-card__link,
   .whatsapp-float__btn, .scroll-top,
   .nav__link, .footer__link, .mobile-nav__link,

@@ -83,50 +83,22 @@ const dictionary = {
 
   // Contact
   "contact-label": { es: "Habla con nosotros", ca: "Parla amb nosaltres" },
-  "contact-title": { es: "Conecta tu<br>coche con nosotros.", ca: "Connecta el teu<br>cotxe amb nosaltres." },
-  "contact-desc": { 
-    es: "Estamos en el barrio de la Bordeta, listos para cuidar de tu vehículo. Pásate a vernos o escríbenos por WhatsApp y reserva tu cita al instante, asegurándote una atención al momento, sin esperas innecesarias.", 
-    ca: "Som al barri de la Bordeta, a punt per cuidar del teu vehicle. Passa'ns a veure o escriu-nos per WhatsApp i reserva la teva cita a l'instant, assegurant-te una atenció al moment, sense esperes innecessàries." 
+  "contact-title": { es: "Escríbenos por WhatsApp<br>o pásate por el taller.", ca: "Escriu-nos per WhatsApp<br>o passa pel taller." },
+  "contact-desc": {
+    es: "El mecánico pasa el día con las manos en los coches, así que la mejor manera de hablar con nosotros es enviar un WhatsApp o venir directamente al taller, en la Bordeta.",
+    ca: "El mecànic es passa el dia amb les mans als cotxes, així que la millor manera de parlar amb nosaltres és enviar un WhatsApp o venir directament al taller, a la Bordeta."
   },
-  
+  "contact-note-title": { es: "Siempre contestamos, pero sin prisas.", ca: "Sempre contestem, però sense presses." },
+  "contact-note-text": {
+    es: "Respondemos todos los mensajes, aunque quizá no al momento: primero van las reparaciones que tenemos entre manos. Cuéntanos qué le pasa al coche y la matrícula, y te contestaremos en cuanto podamos.",
+    ca: "Responem tots els missatges, tot i que potser no al moment: primer van les reparacions que tenim entre mans. Explica'ns què li passa al cotxe i la matrícula, i et contestarem tan aviat com puguem."
+  },
+  "contact-cta": { es: 'Enviar WhatsApp <span class="nowrap">· 629 93 41 24</span>', ca: 'Enviar WhatsApp <span class="nowrap">· 629 93 41 24</span>' },
+
   "contact-loc-title": { es: "Dirección", ca: "Adreça" },
   "contact-addr-val":  { es: "C. Centro, nº 18 (25001 Lleida)", ca: "C. Centre, núm. 18 (25001 Lleida)" },
-  "contact-tel-label": { es: "Contactar v\u00eda WhatsApp", ca: "Contactar via WhatsApp" },
-  "contact-email-label": { es: "Correo electrónico", ca: "Correu electrònic" },
   "contact-time-label": { es: "Horario", ca: "Horari" },
-  "contact-time-val": { es: "Lunes a Viernes<br>08:30 – 13:30<br>16:00 – 19:00", ca: "Dilluns a Divendres<br>08:30 – 13:30<br>16:00 – 19:00" },
-
-  // Form
-  "form-title": { 
-    es: "TAMBIÉN PUEDES CONTACTAR MEDIANTE ESTE FORMULARIO:", 
-    ca: "TAMBÉ POTS CONTACTAR MITJANÇANT AQUEST FORMULARI:" 
-  },
-  "form-lbl-name": { es: "Nombre *", ca: "Nom *" },
-  "form-lbl-mat": { es: "Matrícula (opcional)", ca: "Matrícula (opcional)" },
-  "form-lbl-tel": { es: "Teléfono *", ca: "Telèfon *" },
-  "form-lbl-email": { es: "Correo electrónico *", ca: "Correu electrònic *" },
-  "form-ph-name": { es: "Tu nombre", ca: "El teu nom" },
-  "form-ph-tel": { es: "Tu teléfono", ca: "El teu telèfon" },
-  "form-ph-mat": { es: "Ex: 1234ABC", ca: "Ex: 1234ABC" },
-  "form-ph-email": { es: "Tu correo electrónico", ca: "El teu correu electrònic" },
-  "form-lbl-msg": { es: "¿Qué le pasa a tu coche? *", ca: "Què li passa al teu cotxe? *" },
-  "form-ph-msg": { es: "Cuéntanos qué le pasa al coche...", ca: "Explica'ns què li passa al cotxe..." },
-  "form-submit-btn": { es: 'Enviar mensaje <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>', ca: 'Enviar missatge <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>' },
-  "form-privacy": { es: "Tus datos se tratarán de acuerdo con nuestra política de privacidad.", ca: "Les teves dades es tractaran d'acord amb la nostra política de privacitat." },
-  "form-check-priv": { 
-    es: 'Acepto la <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacidad</a>.', 
-    ca: 'Accepto la <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacitat</a>.' 
-  },
-  "form-legal-footer": { 
-    es: 'Información básica: Responsable: Sin i Solé Motors, SL. Finalidad: Gestionar tu cita. Derechos: acceso, rectificación, supresión y demás derechos en sinysole@msn.com. Más info en nuestra <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacidad</a>.', 
-    ca: 'Informació bàsica: Responsable: Sin i Solé Motors, SL. Finalitat: Gestionar la teva cita. Drets: accés, rectificació, supressió i altres drets a sinysole@msn.com. Més info a la nostra <a href="#" style="text-decoration: underline;" onclick="event.preventDefault(); openLegalModal(\'privacitat\');">Política de Privacitat</a>.' 
-  },
-
-  "form-success-title": { es: "¡Mensaje recibido!", ca: "Missatge rebut!" },
-  "form-success-body": {
-    es: "Arrancamos motores \u2014 nos ponemos en contacto contigo lo antes posible.",
-    ca: "Engegem motors \u2014 et contactarem el m\u00e9s aviat possible."
-  },
+  "contact-time-val": { es: "Lunes a Viernes<br>08:30 – 13:30 · 16:00 – 19:00", ca: "Dilluns a Divendres<br>08:30 – 13:30 · 16:00 – 19:00" },
 
   // Footer
 
