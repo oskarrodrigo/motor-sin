@@ -530,23 +530,26 @@
     </div>
   </section>
 
-  <!-- ======================== GOOGLE MAPS ======================== -->
-  <!-- El mapa de Google només es carrega quan l'usuari ho demana (evita cookies de tercers sense consentiment) -->
-  <div class="map-section" id="mapa" aria-label="Mapa de localización de MOTOR SIN">
-    <div class="map-facade">
-      <div class="map-facade__inner">
-        <svg class="map-facade__pin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+  <!-- ======================== MAPA ======================== -->
+  <!-- Imatge estàtica d'OpenStreetMap (sense cookies). En clicar s'obre Google Maps. -->
+  <div class="map-section" id="mapa">
+    <a href="https://maps.app.goo.gl/xGSjrtumuKZzuL2H9" class="map-static" target="_blank" rel="noopener noreferrer"
+       data-i18n-title="map-aria" aria-label="Abrir la ubicación de MOTOR SIN en Google Maps">
+      <img src="public/images/mapa-taller.webp" class="map-static__img" width="1792" height="560" loading="lazy"
+           alt="Plano del barrio de la Bordeta (Lleida) con la ubicación del taller MOTOR SIN en el Carrer del Centre">
+      <span class="map-static__pin" aria-hidden="true">
+        <svg viewBox="0 0 40 52" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 0C9 0 0 8.7 0 19.5 0 33.4 20 52 20 52s20-18.6 20-32.5C40 8.7 31 0 20 0z" fill="#C0001A"/>
+          <circle cx="20" cy="19" r="7.5" fill="#fff"/>
         </svg>
-        <p class="map-facade__addr">Carrer del Centre, 18 · 25001 Lleida</p>
-        <div class="map-facade__actions">
-          <button type="button" class="map-facade__btn" id="map-load-btn" data-i18n="map-load">Mostrar mapa</button>
-          <a href="https://maps.app.goo.gl/xGSjrtumuKZzuL2H9" class="map-facade__link" target="_blank" rel="noopener noreferrer" data-i18n="map-open">Abrir en Google Maps</a>
-        </div>
-        <p class="map-facade__note" data-i18n="map-note">Al mostrar el mapa, Google puede instalar sus propias cookies.</p>
-      </div>
-    </div>
+      </span>
+      <span class="map-static__card">
+        <strong class="map-static__name">MOTOR SIN</strong>
+        <span class="map-static__addr" data-i18n="map-addr">Carrer del Centre, 18 · Lleida</span>
+        <span class="map-static__btn" data-i18n="map-cta">Cómo llegar →</span>
+      </span>
+    </a>
+    <a href="https://www.openstreetmap.org/copyright" class="map-static__attrib" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a>
   </div>
 
 </main>

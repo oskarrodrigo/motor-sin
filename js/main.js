@@ -8,7 +8,6 @@
  * 5. Hero entry animation
  * 6. Magnetic buttons
  * 8. Scroll to top
- * 9. Google Maps (càrrega sota demanda)
  * 10. 3D Services Cards
  */
 
@@ -500,31 +499,6 @@ function initScrollTop() {
 }
 
 /* ==========================================
-   9. GOOGLE MAPS (càrrega sota demanda)
-   L'iframe no es carrega fins que l'usuari ho demana,
-   així Google no instal·la cookies sense consentiment.
-   ========================================== */
-function initMapFacade() {
-  const btn = document.getElementById('map-load-btn');
-  const section = document.getElementById('mapa');
-  if (!btn || !section) return;
-
-  btn.addEventListener('click', () => {
-    const lang = localStorage.getItem('lang') || 'es';
-    const iframe = document.createElement('iframe');
-    iframe.src = `https://maps.google.com/maps?q=Carrer+del+Centre+18%2C+25001+Lleida&hl=${lang}&z=16&output=embed`;
-    iframe.width = '100%';
-    iframe.height = '420';
-    iframe.allowFullscreen = true;
-    iframe.referrerPolicy = 'no-referrer-when-downgrade';
-    iframe.title = lang === 'ca'
-      ? 'Ubicació de MOTOR SIN — Carrer del Centre 18, Lleida'
-      : 'Ubicación de MOTOR SIN — Carrer del Centre 18, Lleida';
-    section.querySelector('.map-facade').replaceWith(iframe);
-  });
-}
-
-/* ==========================================
    10. WHATSAPP CAR ANIMATION
    ========================================== */
 function initWhatsAppAnimation() {
@@ -765,11 +739,9 @@ function openLegalModal(type) {
               <tbody>
                 <tr><td><code>lang</code> (almacenamiento local)</td><td>Propio</td><td>Recordar el idioma que eliges (castellano o catalán).</td><td>Hasta que lo borres desde tu navegador.</td></tr>
                 <tr><td><code>__cf_bm</code> y similares</td><td>Cloudflare</td><td>Cookies técnicas de seguridad que el proveedor de alojamiento puede instalar para proteger la web frente a bots y ataques.</td><td>Hasta 30 minutos.</td></tr>
-                <tr><td>Cookies de Google Maps</td><td>Google</td><td>Mostrar el mapa de localización. <strong>Solo se instalan si pulsas «Mostrar mapa».</strong></td><td>Según la <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">política de cookies de Google</a>.</td></tr>
               </tbody>
             </table>
           </div>
-          <p>El mapa de localización no se carga hasta que pulsas «Mostrar mapa». Si prefieres no cargarlo, puedes usar el enlace «Abrir en Google Maps».</p>
           <p>Puedes configurar tu navegador para bloquear o eliminar estos datos, aunque es posible que algunas funcionalidades de la web dejen de funcionar correctamente.</p>
         `
       },
@@ -783,11 +755,9 @@ function openLegalModal(type) {
               <tbody>
                 <tr><td><code>lang</code> (emmagatzematge local)</td><td>Propi</td><td>Recordar l'idioma que tries (castellà o català).</td><td>Fins que l'esborris des del navegador.</td></tr>
                 <tr><td><code>__cf_bm</code> i similars</td><td>Cloudflare</td><td>Cookies tècniques de seguretat que el proveïdor d'allotjament pot instal·lar per protegir el web de bots i atacs.</td><td>Fins a 30 minuts.</td></tr>
-                <tr><td>Cookies de Google Maps</td><td>Google</td><td>Mostrar el mapa de localització. <strong>Només s'instal·len si prems «Mostrar mapa».</strong></td><td>Segons la <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer">política de cookies de Google</a>.</td></tr>
               </tbody>
             </table>
           </div>
-          <p>El mapa de localització no es carrega fins que prems «Mostrar mapa». Si prefereixes no carregar-lo, pots fer servir l'enllaç «Obrir a Google Maps».</p>
           <p>Pots configurar el teu navegador per bloquejar o eliminar aquestes dades, tot i que és possible que algunes funcionalitats del web deixin de funcionar correctament.</p>
         `
       }
@@ -828,7 +798,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initMagneticButtons();
   initScrollTop();
-  initMapFacade();
   init3DCards();
   initWhatsAppAnimation();
 });

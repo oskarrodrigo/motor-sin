@@ -119,9 +119,9 @@ const dictionary = {
   },
   
   // Mapa
-  "map-load": { es: "Mostrar mapa", ca: "Mostrar mapa" },
-  "map-open": { es: "Abrir en Google Maps", ca: "Obrir a Google Maps" },
-  "map-note": { es: "Al mostrar el mapa, Google puede instalar sus propias cookies.", ca: "En mostrar el mapa, Google pot instal·lar les seves pròpies cookies." },
+  "map-addr": { es: "Carrer del Centre, 18 · Lleida", ca: "Carrer del Centre, 18 · Lleida" },
+  "map-cta": { es: "Cómo llegar →", ca: "Com arribar-hi →" },
+  "map-aria": { es: "Abrir la ubicación de MOTOR SIN en Google Maps", ca: "Obrir la ubicació de MOTOR SIN a Google Maps" },
 
   // Misc
   "scroll-top": { es: "Volver arriba", ca: "Tornar a dalt" },
