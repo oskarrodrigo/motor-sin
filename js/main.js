@@ -699,7 +699,8 @@ function openLegalModal(type) {
           <strong>Domicilio:</strong> C. Centro, nº 18 (25001 Lleida).<br>
           <strong>Correo electrónico:</strong> sinysole@msn.com<br>
           <strong>Teléfono:</strong> 629 93 41 24<br>
-          <strong>Datos de registro:</strong> Inscrita en el Registro Mercantil de Lleida.</p>
+          <strong>Datos de registro:</strong> Inscrita en el Registro Mercantil de Lleida, tomo 226, folio 168, hoja L-4.232, inscripción 1ª.<br>
+          <strong>Registro Industrial (taller):</strong> L-22470</p>
  
           <h3>2. Propiedad Intelectual</h3>
           <p>El código fuente, los diseños gráficos, las imágenes, las fotografías, los sonidos, las animaciones, el software, los textos, así como la información y los contenidos que se recogen en este sitio web están protegidos por la legislación española sobre los derechos de propiedad intelectual e industrial a favor de Sin i Solé Motors, SL. No se permite la reproducción y/o publicación, total o parcial, del sitio web, ni su tratamiento informático, su distribución, difusión, ni modificación o transformación sin el permiso previo y por escrito de Sin i Solé Motors, SL.</p>
@@ -726,7 +727,8 @@ function openLegalModal(type) {
           <strong>Domicili:</strong> C. Centre, núm. 18 (25001 Lleida).<br>
           <strong>Correu electrònic:</strong> sinysole@msn.com<br>
           <strong>Telèfon:</strong> 629 93 41 24<br>
-          <strong>Dades de registre:</strong> Inscrita al Registre Mercantil de Lleida.</p>
+          <strong>Dades de registre:</strong> Inscrita al Registre Mercantil de Lleida, tom 226, foli 168, full L-4.232, inscripció 1a.<br>
+          <strong>Registre Industrial (taller):</strong> L-22470</p>
  
           <h3>2. Propietat Intel·lectual</h3>
           <p>El codi font, els dissenys gràfics, les imatges, les fotografies, els sons, les animacions, el programari, els textos, així com la informació i els continguts que es recullen en aquest lloc web estan protegits per la legislació espanyola sobre els drets de propietat intel·lectual i industrial a favor de Sin i Solé Motors, SL. No es permet la reproducció i/o publicació, total o parcial, del lloc web, ni el seu tractament informàtic, la seva distribució, difusió, ni modificació o transformació sense el permís previ i per escrit de Sin i Solé Motors, SL.</p>

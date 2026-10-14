@@ -1077,8 +1077,10 @@ section {
 .trust-strip__inner {
   display: flex;
   align-items: center;
-  gap: var(--space-2xl);
+  gap: var(--space-lg);
   justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 @media (max-width: 900px) {

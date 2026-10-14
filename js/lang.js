@@ -25,6 +25,7 @@ const dictionary = {
   "trust-3": { es: "Sin sorpresas en la factura", ca: "Sense sorpreses a la factura" },
   "trust-4": { es: "Todo tipo de vehículos", ca: "Tot tipus de vehicles" },
   "trust-5": { es: "Diagnóstico de última generación", ca: "Diagnòstic d'última generació" },
+  "trust-6": { es: "Miembro de la Asociación Empresarial de Automoción de Lleida", ca: "Membre de l'Associació Empresarial d'Automoció de Lleida" },
 
   // Services
   "services-label": { es: "Nuestros servicios", ca: "Els nostres serveis" },
